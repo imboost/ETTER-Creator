@@ -50,7 +50,7 @@ module.exports = function (socketPort) {
                 ]
             },
             userDir: ".",
-            flowFile: ".flows.json",
+            flowFile: "./flows.json",
             httpStatic: "public",
             contextStorage: {
                 default: {

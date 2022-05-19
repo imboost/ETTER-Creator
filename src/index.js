@@ -1,24 +1,23 @@
 const debug = "DEV" || process.env.debug || "DEV";
 
-// import { app, BrowserWindow } from 'electron';
 const { app, BrowserWindow, ipcMain, dialog, Menu, MenuItem } = require('electron');
 const fs = require('fs');
 var path = require('path');
 
-// var flowfile = "flows.json";
-// var userdir = ".";
+var flowfile = "flows.json";
+var userdir = ".";
 
-// if (!fs.existsSync(path.resolve(path.join(userdir, flowfile)))) {
-//   fs.readFile(path.resolve(path.join(__dirname, flowfile)), "utf8", (err, data) => {
-//     if (err) {
-//       console.log(err)
-//       throw err
-//     } else {
-//       let file_content = data.toString('utf8');
-//       fs.writeFileSync(path.resolve(path.join(userdir, flowfile)), file_content);
-//     }
-//   });
-// }
+if (!fs.existsSync(path.resolve(path.join(userdir, flowfile)))) {
+  fs.readFile(path.resolve(path.join(__dirname, "..", flowfile)), "utf8", (err, data) => {
+    if (err) {
+      console.log(err)
+      throw err
+    } else {
+      let file_content = data.toString('utf8');
+      fs.writeFileSync(path.resolve(path.join(userdir, flowfile)), file_content);
+    }
+  });
+}
 
 // Socket Port
 let socketPort = Math.floor(1000 + Math.random() * 9000);
