@@ -2,7 +2,7 @@
   "name": "etter-creator",
   "productName": "ETTER Creator",
   "version": "0.0.1",
-  "description": " Open Source low code application platform based on Node-RED and Framework7",
+  "description": "An open source low code application platform based on Node-RED, uibuilder and Framework7",
   "main": "src/index.js",
   "scripts": {
     "nodered": "node ./src/server.js",
