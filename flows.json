@@ -1,0 +1,2689 @@
+[
+    {
+        "id": "e4184d8f0d35d1a2",
+        "type": "tab",
+        "label": "pro",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a79ef6be6a7fb60b",
+        "type": "uibuilder",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "topic": "",
+        "url": "pro",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "oldUrl": "editor",
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "5.0.1",
+        "x": 350,
+        "y": 720,
+        "wires": [
+            [
+                "ab5c2a2da29c8df5"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e039284f7d6a88ac",
+        "type": "uibuilder",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "topic": "",
+        "url": "chat",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "5.0.1",
+        "x": 1950,
+        "y": 280,
+        "wires": [
+            [
+                "08b15eed0b3693bc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "30ad7d2320b3ed2e",
+        "type": "link in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "in_pro",
+        "links": [
+            "ec9a940cdca6d30c",
+            "ceea9b90413a2dd7",
+            "13303911a522a080",
+            "1026b164fd4fdb85",
+            "325ad3dab26910b4",
+            "e5b4be5fc1b23023",
+            "7acc9824b8a14d78",
+            "e0cb8f9aa542387f",
+            "1b3b422e821f211a",
+            "1929d3de9076a596",
+            "59893a2c98c44bf1",
+            "3491e3c49c038fb4",
+            "409b0c49c072f980",
+            "1a48bc82198c4577",
+            "e9e623e2dbb6d17b",
+            "a4f3f4a4b8e2685f",
+            "c822142c8eb82dad",
+            "ebf70c0819d9f23f",
+            "46860bd83a959c57",
+            "a2dbbc4ded302ab4",
+            "bd92ec797f3eed3c",
+            "be9b40699c385988",
+            "007e484eaaa198ed",
+            "528ff92707de2031",
+            "d56c489ae3a10904",
+            "456226a1496fe016",
+            "1a76956aa9fc747b",
+            "2015c110b8bddd6b",
+            "0a91c2bc2fd7f284",
+            "6aac1e18358d4e2c",
+            "13f77ea9a13d5f54",
+            "9224a28a5401bbfb",
+            "e7d69605420da2be",
+            "8267559fb8a47dad",
+            "47e8fcbe705d986c",
+            "284aba89cf587609",
+            "d20f35634ab55497"
+        ],
+        "x": 225,
+        "y": 720,
+        "wires": [
+            [
+                "a79ef6be6a7fb60b"
+            ]
+        ]
+    },
+    {
+        "id": "24bccb0f6c8cbdc5",
+        "type": "link in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "in_app",
+        "links": [
+            "14a7d8804ae1d1e9",
+            "246fd4988bb7e2e4",
+            "2907157baed89e58",
+            "9e7378e25f9b0229",
+            "acf4f32295c73292",
+            "b1017aa70dad92b0",
+            "f6065408675bccac",
+            "b16f7727c6be1653",
+            "c68240660124a80e",
+            "c605a33c69394361",
+            "a00c4bf8313a110e",
+            "2af7380fa6419446",
+            "9936773304590fd8",
+            "a81b659ae7a35e61",
+            "52cf2f144f886dca",
+            "3e9a5390db1be664",
+            "d1a7a66afc6d1a88",
+            "a613c66326157d97",
+            "8b23b7066b1e66f5",
+            "d1e9f576d7170ba0",
+            "0a789518eea47699",
+            "c0db3e08b06f96b6",
+            "5b23b9b603010d3b",
+            "0b6994191c2b2d6c",
+            "495062856cd928a1",
+            "3aa93b74e87b6f10",
+            "e414db521db8a0cb",
+            "afd38f57df688226"
+        ],
+        "x": 1805,
+        "y": 280,
+        "wires": [
+            [
+                "e039284f7d6a88ac"
+            ]
+        ]
+    },
+    {
+        "id": "08b15eed0b3693bc",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "out_chat",
+        "mode": "link",
+        "links": [
+            "e3679c59441f138c"
+        ],
+        "x": 2065,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9e7378e25f9b0229",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "remove_element_id",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5",
+            "5ff45979587a8787"
+        ],
+        "x": 1135,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c38f6b942b19be15",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "remove_element_id",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id,\n    \"element_id_selected\": msg.element_id_selected\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 540,
+        "wires": [
+            [
+                "9e7378e25f9b0229"
+            ]
+        ]
+    },
+    {
+        "id": "f8e609ab1bde9a82",
+        "type": "switch",
+        "z": "e4184d8f0d35d1a2",
+        "name": "app_worker",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "get_routes_js",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set_filename",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set_page_data_name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set_page_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_page_data_name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_page_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set_element_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_page_elements",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update_element_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update_page_data_name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "remove_element_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "add_element_component",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "page_create",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_element_class",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "class_remove",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "class_add",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_element_style",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update_element_style",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 18,
+        "x": 730,
+        "y": 1900,
+        "wires": [
+            [
+                "374df0327405e5e0"
+            ],
+            [
+                "fae8e8aa0abcfc57"
+            ],
+            [
+                "9bbcb85179bc0772"
+            ],
+            [
+                "f35fd8ce5f04a4d5"
+            ],
+            [
+                "d41ea571df0a9d42"
+            ],
+            [
+                "74064c3454da6f74"
+            ],
+            [
+                "3fd02276f22815ac"
+            ],
+            [
+                "c8567a7eeebda121"
+            ],
+            [
+                "5caa9d262ef87dfd"
+            ],
+            [
+                "a74c4179c9e692bb"
+            ],
+            [
+                "e740ec2532a3434a"
+            ],
+            [
+                "c493c6df62a1b4f0"
+            ],
+            [
+                "3e2925d2fa843b23"
+            ],
+            [
+                "524db0c6ddec7a01"
+            ],
+            [
+                "74ccc400fd138a89"
+            ],
+            [
+                "e191170ace5ab1d4"
+            ],
+            [
+                "98257878fc864243"
+            ],
+            [
+                "2cbdc09050ba1346"
+            ]
+        ]
+    },
+    {
+        "id": "e3679c59441f138c",
+        "type": "link in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "in_app_worker",
+        "links": [
+            "08b15eed0b3693bc",
+            "74e6dc7c8c5ad321",
+            "778616ebf2adcbe4"
+        ],
+        "x": 595,
+        "y": 1900,
+        "wires": [
+            [
+                "f8e609ab1bde9a82"
+            ]
+        ]
+    },
+    {
+        "id": "374df0327405e5e0",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/js/routes.js\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1500,
+        "wires": [
+            [
+                "d4b397b820ca3766"
+            ]
+        ]
+    },
+    {
+        "id": "d4b397b820ca3766",
+        "type": "file in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1120,
+        "y": 1500,
+        "wires": [
+            [
+                "790d1a6771888a1e"
+            ]
+        ]
+    },
+    {
+        "id": "790d1a6771888a1e",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes",
+        "func": "var data = msg.payload;\nvar data_clean_1 = data.replace('var routes', '');\nvar data_clean_2 = data_clean_1.replace('=', '');\nvar data_clean_3 = data_clean_2.replace(';', '');\nvar data_clean_4 = data_clean_3.replace(/url/g, '\"url\"');\nvar data_clean_5 = data_clean_4.replace(/path/g, '\"path\"');\nvar data_clean_6 = data_clean_5.replace(/'/g, '\"');\n\nmsg.payload = data_clean_6;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 1500,
+        "wires": [
+            [
+                "73842b0b9906d184"
+            ]
+        ]
+    },
+    {
+        "id": "73842b0b9906d184",
+        "type": "json",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1410,
+        "y": 1500,
+        "wires": [
+            [
+                "573e2ce3ef5974e7"
+            ]
+        ]
+    },
+    {
+        "id": "573e2ce3ef5974e7",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 1500,
+        "wires": [
+            [
+                "1a48bc82198c4577"
+            ]
+        ]
+    },
+    {
+        "id": "1a48bc82198c4577",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_routes_js",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1655,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "e387dc3776363fe1",
+        "type": "switch",
+        "z": "e4184d8f0d35d1a2",
+        "name": "pro_worker",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "get_ip_address",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "uibuilder_all",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "page_navigate",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update_element_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update_page_data_name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set_element_id_choosed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "remove_element_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "element_hightlight_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "element_hightlight_id_clear",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "add_element_component",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "add_element_component_reload",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "code_save",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "page_create",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "page_remove",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_element_class",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "class_remove",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "class_add",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_element_style",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update_element_style",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set_app_name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "get_app_pages",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 21,
+        "x": 730,
+        "y": 720,
+        "wires": [
+            [
+                "b6bb421a376c3fb4"
+            ],
+            [
+                "ea2ae3532edbaff3"
+            ],
+            [
+                "7b30115e577ebf7b"
+            ],
+            [
+                "abb6a62b82ddc9ac"
+            ],
+            [
+                "0ffd2d9576fa1893"
+            ],
+            [
+                "ccd3ff1524f8bfc0"
+            ],
+            [
+                "c38f6b942b19be15"
+            ],
+            [
+                "4d29d098d99eb512"
+            ],
+            [
+                "c12c74fb621e5f27"
+            ],
+            [
+                "3e1d7e8cb59d3eac"
+            ],
+            [
+                "403eabc868385ab3"
+            ],
+            [
+                "5d7c598dc755edbc"
+            ],
+            [
+                "83a2cdd3f73e91c1"
+            ],
+            [
+                "6eb0af37eea16af5"
+            ],
+            [
+                "3a3cbd98a2892376"
+            ],
+            [
+                "a29c5b6b34ffb12f"
+            ],
+            [
+                "a6b1accabce7b73e"
+            ],
+            [
+                "a521d47579574318"
+            ],
+            [
+                "f871ab7dc093f2e4"
+            ],
+            [
+                "96c8da8dc425aa8c"
+            ],
+            [
+                "e88f400e54831007"
+            ]
+        ]
+    },
+    {
+        "id": "b4c8f4dac161894b",
+        "type": "link in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "in_pro_worker",
+        "links": [
+            "ab5c2a2da29c8df5"
+        ],
+        "x": 595,
+        "y": 720,
+        "wires": [
+            [
+                "e387dc3776363fe1"
+            ]
+        ]
+    },
+    {
+        "id": "ab5c2a2da29c8df5",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "out_pro",
+        "mode": "link",
+        "links": [
+            "b4c8f4dac161894b"
+        ],
+        "x": 475,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7b30115e577ebf7b",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "page_navigate",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload //path to load\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 300,
+        "wires": [
+            [
+                "2af7380fa6419446"
+            ]
+        ]
+    },
+    {
+        "id": "2af7380fa6419446",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "page_navigate",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1115,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9bbcb85179bc0772",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1620,
+        "wires": [
+            [
+                "e74f79629e614cff"
+            ]
+        ]
+    },
+    {
+        "id": "e74f79629e614cff",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 1620,
+        "wires": [
+            [
+                "e9e623e2dbb6d17b"
+            ]
+        ]
+    },
+    {
+        "id": "e9e623e2dbb6d17b",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "set_page_data_name",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1235,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "fae8e8aa0abcfc57",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "global.set('pro7_filename', msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f35fd8ce5f04a4d5",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1680,
+        "wires": [
+            [
+                "fd29feb5f8239692"
+            ]
+        ]
+    },
+    {
+        "id": "fd29feb5f8239692",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 1680,
+        "wires": [
+            [
+                "a4f3f4a4b8e2685f"
+            ]
+        ]
+    },
+    {
+        "id": "a4f3f4a4b8e2685f",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "set_page_id",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1235,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "d41ea571df0a9d42",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1740,
+        "wires": [
+            [
+                "c822142c8eb82dad"
+            ]
+        ]
+    },
+    {
+        "id": "c822142c8eb82dad",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_page_data_name",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1055,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "74064c3454da6f74",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload,\n    \"html\": msg.html\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1800,
+        "wires": [
+            [
+                "ebf70c0819d9f23f"
+            ]
+        ]
+    },
+    {
+        "id": "ebf70c0819d9f23f",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_page_id",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1055,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "3fd02276f22815ac",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1860,
+        "wires": [
+            [
+                "378a89ae1b5007aa"
+            ]
+        ]
+    },
+    {
+        "id": "378a89ae1b5007aa",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2dbbc4ded302ab4",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_page_elements",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1055,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "c8567a7eeebda121",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1920,
+        "wires": [
+            [
+                "a2dbbc4ded302ab4"
+            ]
+        ]
+    },
+    {
+        "id": "abb6a62b82ddc9ac",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_element_id",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id,\n    \"element_id_selected\": msg.element_id_selected\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 360,
+        "wires": [
+            [
+                "a81b659ae7a35e61"
+            ]
+        ]
+    },
+    {
+        "id": "a81b659ae7a35e61",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_element_id",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5",
+            "5ff45979587a8787"
+        ],
+        "x": 1135,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "5caa9d262ef87dfd",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1980,
+        "wires": [
+            [
+                "6172b8df122641e4"
+            ]
+        ]
+    },
+    {
+        "id": "6172b8df122641e4",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 1980,
+        "wires": [
+            [
+                "25561c1ac1c47513"
+            ]
+        ]
+    },
+    {
+        "id": "be9b40699c385988",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_element_id",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "25561c1ac1c47513",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 1980,
+        "wires": [
+            [
+                "be9b40699c385988"
+            ]
+        ]
+    },
+    {
+        "id": "0ffd2d9576fa1893",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_page_data_name",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"name\": msg.name,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 420,
+        "wires": [
+            [
+                "52cf2f144f886dca"
+            ]
+        ]
+    },
+    {
+        "id": "52cf2f144f886dca",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_page_name",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1175,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a74c4179c9e692bb",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2040,
+        "wires": [
+            [
+                "fefbf2a44faa0110"
+            ]
+        ]
+    },
+    {
+        "id": "fefbf2a44faa0110",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2040,
+        "wires": [
+            [
+                "c31586a74442e9f4"
+            ]
+        ]
+    },
+    {
+        "id": "007e484eaaa198ed",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_page_data_name",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "c31586a74442e9f4",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2040,
+        "wires": [
+            [
+                "007e484eaaa198ed"
+            ]
+        ]
+    },
+    {
+        "id": "b6bb421a376c3fb4",
+        "type": "NetworkIntf",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "3e9234208ea69b84"
+            ]
+        ]
+    },
+    {
+        "id": "3e9234208ea69b84",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "wifi",
+        "func": "// var wifi = msg.payload.networkInterfaces[\"Wi-Fi\"][3].address;\nvar wifi = msg.payload.networkInterfaces[\"Wi-Fi\"];\nvar i = 0;\nfor (i = 0; i < wifi.length; i++){\n    if (wifi[i].family === \"IPv4\"){\n        msg.wifi = wifi[i].address;\n        \n        return msg;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 180,
+        "wires": [
+            [
+                "b682ef8a6ca983aa"
+            ]
+        ]
+    },
+    {
+        "id": "b682ef8a6ca983aa",
+        "type": "file in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "server_config.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1300,
+        "y": 180,
+        "wires": [
+            [
+                "b2d7747664c0228b"
+            ]
+        ]
+    },
+    {
+        "id": "8087ccd2b9c49dae",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "ip:port",
+        "func": "var uri = msg.wifi + ':' + msg.payload.port;\n\nmsg = {\n    \"topic\": \"get_ip_address\",\n    \"payload\": uri\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 180,
+        "wires": [
+            [
+                "528ff92707de2031"
+            ]
+        ]
+    },
+    {
+        "id": "b2d7747664c0228b",
+        "type": "json",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1470,
+        "y": 180,
+        "wires": [
+            [
+                "8087ccd2b9c49dae"
+            ]
+        ]
+    },
+    {
+        "id": "528ff92707de2031",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_ip_address",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1725,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ea2ae3532edbaff3",
+        "type": "fs-ops-dir",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "path": "./uibuilder",
+        "pathType": "str",
+        "filter": "*",
+        "filterType": "str",
+        "dir": "payload",
+        "dirType": "msg",
+        "x": 960,
+        "y": 240,
+        "wires": [
+            [
+                "8a159090c1a38ceb"
+            ]
+        ]
+    },
+    {
+        "id": "8a159090c1a38ceb",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "func": "msg = {\n    \"topic\": \"uibuilder_all\",\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 240,
+        "wires": [
+            [
+                "d56c489ae3a10904"
+            ]
+        ]
+    },
+    {
+        "id": "d56c489ae3a10904",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "uibuilder_all",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1235,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ccd3ff1524f8bfc0",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "set_element_id_choosed",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 480,
+        "wires": [
+            [
+                "3e9a5390db1be664"
+            ]
+        ]
+    },
+    {
+        "id": "3e9a5390db1be664",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "set_element_id_choosed",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1175,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e740ec2532a3434a",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2100,
+        "wires": [
+            [
+                "5a4adb5c166a93d9"
+            ]
+        ]
+    },
+    {
+        "id": "5a4adb5c166a93d9",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2100,
+        "wires": [
+            [
+                "dc822c62cb826b9b"
+            ]
+        ]
+    },
+    {
+        "id": "456226a1496fe016",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "remove_element_id",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "dc822c62cb826b9b",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2100,
+        "wires": [
+            [
+                "456226a1496fe016"
+            ]
+        ]
+    },
+    {
+        "id": "4d29d098d99eb512",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "element_hightlight_id",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 600,
+        "wires": [
+            [
+                "d1a7a66afc6d1a88"
+            ]
+        ]
+    },
+    {
+        "id": "d1a7a66afc6d1a88",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "element_hightlight_id",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1155,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c12c74fb621e5f27",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "element_hightlight_id_clear",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 660,
+        "wires": [
+            [
+                "a613c66326157d97"
+            ]
+        ]
+    },
+    {
+        "id": "a613c66326157d97",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "element_hightlight_id",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1185,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "3e1d7e8cb59d3eac",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id,\n    \"component\": msg.component,\n    \"action\": msg.action\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 720,
+        "wires": [
+            [
+                "8b23b7066b1e66f5"
+            ]
+        ]
+    },
+    {
+        "id": "8b23b7066b1e66f5",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1175,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "c493c6df62a1b4f0",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2160,
+        "wires": [
+            [
+                "cb82db828a8b571b"
+            ]
+        ]
+    },
+    {
+        "id": "cb82db828a8b571b",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2160,
+        "wires": [
+            [
+                "9becffc7eded947a"
+            ]
+        ]
+    },
+    {
+        "id": "9becffc7eded947a",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2160,
+        "wires": [
+            [
+                "1a76956aa9fc747b"
+            ]
+        ]
+    },
+    {
+        "id": "1a76956aa9fc747b",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "403eabc868385ab3",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component_reload",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 780,
+        "wires": [
+            [
+                "0a789518eea47699"
+            ]
+        ]
+    },
+    {
+        "id": "0a789518eea47699",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1235,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5d7c598dc755edbc",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 840,
+        "wires": [
+            [
+                "7c3e6582de4eccaa"
+            ]
+        ]
+    },
+    {
+        "id": "7c3e6582de4eccaa",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 840,
+        "wires": [
+            [
+                "2015c110b8bddd6b"
+            ]
+        ]
+    },
+    {
+        "id": "2015c110b8bddd6b",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "code_save",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1235,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "83a2cdd3f73e91c1",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "page_create",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"name\": msg.name\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 900,
+        "wires": [
+            [
+                "c0db3e08b06f96b6"
+            ]
+        ]
+    },
+    {
+        "id": "c0db3e08b06f96b6",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1095,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "4f0313cfbd34eb9f",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + msg.name;\nmsg.payload = msg.code;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2400,
+        "wires": [
+            [
+                "967caf5f63eb32ce"
+            ]
+        ]
+    },
+    {
+        "id": "967caf5f63eb32ce",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2400,
+        "wires": [
+            [
+                "fb44038cca1e2d26"
+            ]
+        ]
+    },
+    {
+        "id": "fb44038cca1e2d26",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"name\": msg.name,\n    \"page_name\": msg.page_name\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2400,
+        "wires": [
+            [
+                "0a91c2bc2fd7f284"
+            ]
+        ]
+    },
+    {
+        "id": "0a91c2bc2fd7f284",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "page_create",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2400,
+        "wires": []
+    },
+    {
+        "id": "3e2925d2fa843b23",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "func": "msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/js/routes.js\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2220,
+        "wires": [
+            [
+                "cfaf325d5c9ce7d6"
+            ]
+        ]
+    },
+    {
+        "id": "cfaf325d5c9ce7d6",
+        "type": "file in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1120,
+        "y": 2220,
+        "wires": [
+            [
+                "4967591bde17afc1"
+            ]
+        ]
+    },
+    {
+        "id": "745b663fb547568c",
+        "type": "debug",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4967591bde17afc1",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes",
+        "func": "var data = msg.payload;\nvar data_clean_1 = data.replace('var routes', '');\nvar data_clean_2 = data_clean_1.replace('=', '');\nvar data_clean_3 = data_clean_2.replace(';', '');\nvar data_clean_4 = data_clean_3.replace(/url/g, '\"url\"');\nvar data_clean_5 = data_clean_4.replace(/path/g, '\"path\"');\nvar data_clean_6 = data_clean_5.replace(/'/g, '\"');\n\nmsg.payload = data_clean_6;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2220,
+        "wires": [
+            [
+                "3030c7c0400fd0de"
+            ]
+        ]
+    },
+    {
+        "id": "3030c7c0400fd0de",
+        "type": "json",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1410,
+        "y": 2220,
+        "wires": [
+            [
+                "3f1b959932d7bc91"
+            ]
+        ]
+    },
+    {
+        "id": "3f1b959932d7bc91",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "new_route",
+        "func": "var routes = msg.payload;\n\nvar find = 0;\n\nvar i = 0;\nfor (i = 0; i < routes.length; i++) {\n    var page_name = routes[i].path.split('/');\n    if (page_name[1] === msg.page_name) {\n        find = 1;        \n    }\n}\n\nif (find === 1){\n    return [msg, null];\n} else {\n    routes.splice(routes.length-1);\n            \n    routes.push({\n        path: '/' + msg.page_name + '/',\n        url: './pages/' + msg.name\n    });\n        \n    routes.push({\n        path: '(.*)',\n        url: './pages/404.html'\n    });\n    \n    return [null, msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 2280,
+        "wires": [
+            [
+                "2f5a9a0e787c2bdf"
+            ],
+            [
+                "a29a51de689203eb"
+            ]
+        ]
+    },
+    {
+        "id": "1d01bf65634f3cd3",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "func": "var routes = msg.payload;\nvar routes_path = routes.replace(/\"path\"/g, 'path');\nvar routes_url = routes_path.replace(/\"url\"/g, 'url');\n\nmsg.payload = \"var routes = \" + routes_url + \";\";\nmsg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/js/routes.js\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 2340,
+        "wires": [
+            [
+                "815afd489692cfb3"
+            ]
+        ]
+    },
+    {
+        "id": "a29a51de689203eb",
+        "type": "json",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1130,
+        "y": 2340,
+        "wires": [
+            [
+                "1d01bf65634f3cd3"
+            ]
+        ]
+    },
+    {
+        "id": "815afd489692cfb3",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1440,
+        "y": 2340,
+        "wires": [
+            [
+                "4f0313cfbd34eb9f"
+            ]
+        ]
+    },
+    {
+        "id": "2f5a9a0e787c2bdf",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "msg = {\n    \"topic\": \"page_create_canceled\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 2280,
+        "wires": [
+            [
+                "6aac1e18358d4e2c"
+            ]
+        ]
+    },
+    {
+        "id": "6aac1e18358d4e2c",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "add_element_component",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1235,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "3b9506d8f1c7a0b0",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "page_remove",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"path\": \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\",\n    \"filename\": global.get('pro7_filename')\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 1020,
+        "wires": [
+            [
+                "da08ad55aa6ab21b"
+            ]
+        ]
+    },
+    {
+        "id": "13f77ea9a13d5f54",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "page_remove",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1755,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "da08ad55aa6ab21b",
+        "type": "fs-ops-delete",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "path": "path",
+        "pathType": "msg",
+        "filename": "filename",
+        "filenameType": "msg",
+        "x": 1490,
+        "y": 1020,
+        "wires": [
+            [
+                "7d7b894e3942253f"
+            ]
+        ]
+    },
+    {
+        "id": "6eb0af37eea16af5",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "func": "msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/js/routes.js\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 960,
+        "wires": [
+            [
+                "107f5c45b5518a7f"
+            ]
+        ]
+    },
+    {
+        "id": "107f5c45b5518a7f",
+        "type": "file in",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1120,
+        "y": 960,
+        "wires": [
+            [
+                "75029f72de51e04e"
+            ]
+        ]
+    },
+    {
+        "id": "75029f72de51e04e",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes",
+        "func": "var data = msg.payload;\nvar data_clean_1 = data.replace('var routes', '');\nvar data_clean_2 = data_clean_1.replace('=', '');\nvar data_clean_3 = data_clean_2.replace(';', '');\nvar data_clean_4 = data_clean_3.replace(/url/g, '\"url\"');\nvar data_clean_5 = data_clean_4.replace(/path/g, '\"path\"');\nvar data_clean_6 = data_clean_5.replace(/'/g, '\"');\n\nmsg.payload = data_clean_6;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 960,
+        "wires": [
+            [
+                "13e752196d7801bf"
+            ]
+        ]
+    },
+    {
+        "id": "13e752196d7801bf",
+        "type": "json",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1410,
+        "y": 960,
+        "wires": [
+            [
+                "a29855321e027bb5"
+            ]
+        ]
+    },
+    {
+        "id": "a29855321e027bb5",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "new_route",
+        "func": "var routes = msg.payload;\n\n// var find = 0;\n// var find_index = null;\n\nvar i = 0;\nfor (i = 0; i < routes.length; i++) {\n    if (routes[i].url === \"./pages/\" + global.get(\"pro7_filename\")) {\n        // msg.path = routes[i].url;\n        // msg.paths = \"./pages/\" + global.get(\"pro7_filename\");\n        // find = 1;        \n        // find_index = i;\n        \n        routes.splice(i, 1);\n    }\n}\n\nreturn msg;\n\n// if (find === 1){\n//     return [msg, null];\n// } else {\n//     routes.splice(routes.length-1);\n            \n//     routes.push({\n//         path: '/' + msg.page_name + '/',\n//         url: './pages/' + msg.name\n//     });\n        \n//     routes.push({\n//         path: '(.*)',\n//         url: './pages/404.html'\n//     });\n    \n//     return [null, msg];\n// }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 960,
+        "wires": [
+            [
+                "5a79759a0061c105"
+            ]
+        ]
+    },
+    {
+        "id": "5a79759a0061c105",
+        "type": "json",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1730,
+        "y": 960,
+        "wires": [
+            [
+                "481d93d9154075fe"
+            ]
+        ]
+    },
+    {
+        "id": "481d93d9154075fe",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "routes.js",
+        "func": "var routes = msg.payload;\nvar routes_path = routes.replace(/\"path\"/g, 'path');\nvar routes_url = routes_path.replace(/\"url\"/g, 'url');\n\nmsg.payload = \"var routes = \" + routes_url + \";\";\nmsg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/js/routes.js\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1020,
+        "wires": [
+            [
+                "7c6ceb75d39bbe78"
+            ]
+        ]
+    },
+    {
+        "id": "7c6ceb75d39bbe78",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 1020,
+        "wires": [
+            [
+                "3b9506d8f1c7a0b0"
+            ]
+        ]
+    },
+    {
+        "id": "7d7b894e3942253f",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "msg = {\n    \"topic\": \"page_remove\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1020,
+        "wires": [
+            [
+                "13f77ea9a13d5f54"
+            ]
+        ]
+    },
+    {
+        "id": "3a3cbd98a2892376",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_element_class",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 1080,
+        "wires": [
+            [
+                "5b23b9b603010d3b"
+            ]
+        ]
+    },
+    {
+        "id": "5b23b9b603010d3b",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_element_class",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1135,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "9224a28a5401bbfb",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_element_class",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1055,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "524db0c6ddec7a01",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 2460,
+        "wires": [
+            [
+                "9224a28a5401bbfb"
+            ]
+        ]
+    },
+    {
+        "id": "a29c5b6b34ffb12f",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "class_remove",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id,\n    \"class_name\": msg.class_name\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1140,
+        "wires": [
+            [
+                "0b6994191c2b2d6c"
+            ]
+        ]
+    },
+    {
+        "id": "0b6994191c2b2d6c",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "class_remove",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1115,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "74ccc400fd138a89",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2520,
+        "wires": [
+            [
+                "b2cf6665a2481dab"
+            ]
+        ]
+    },
+    {
+        "id": "b2cf6665a2481dab",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2520,
+        "wires": [
+            [
+                "7fd9a766e2a022a1"
+            ]
+        ]
+    },
+    {
+        "id": "7fd9a766e2a022a1",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2520,
+        "wires": [
+            [
+                "e7d69605420da2be"
+            ]
+        ]
+    },
+    {
+        "id": "e7d69605420da2be",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "class_remove",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "a6b1accabce7b73e",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "class_add",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id,\n    \"class_name\": msg.class_name\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1200,
+        "wires": [
+            [
+                "495062856cd928a1"
+            ]
+        ]
+    },
+    {
+        "id": "495062856cd928a1",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "class_add",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1075,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "e191170ace5ab1d4",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2580,
+        "wires": [
+            [
+                "575f0921032167a9"
+            ]
+        ]
+    },
+    {
+        "id": "575f0921032167a9",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2580,
+        "wires": [
+            [
+                "4b67a439bc7282ea"
+            ]
+        ]
+    },
+    {
+        "id": "4b67a439bc7282ea",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2580,
+        "wires": [
+            [
+                "8267559fb8a47dad"
+            ]
+        ]
+    },
+    {
+        "id": "8267559fb8a47dad",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "class_add",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "a521d47579574318",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_element_style",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 1260,
+        "wires": [
+            [
+                "3aa93b74e87b6f10"
+            ]
+        ]
+    },
+    {
+        "id": "3aa93b74e87b6f10",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_element_style",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1135,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "47e8fcbe705d986c",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_element_style",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1055,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "98257878fc864243",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload,\n    \"element_id\": msg.element_id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 2640,
+        "wires": [
+            [
+                "47e8fcbe705d986c"
+            ]
+        ]
+    },
+    {
+        "id": "f871ab7dc093f2e4",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_element_style",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n    \"element_id\": msg.element_id,\n    \"element_css\": msg.element_css\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1320,
+        "wires": [
+            [
+                "e414db521db8a0cb"
+            ]
+        ]
+    },
+    {
+        "id": "e414db521db8a0cb",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_element_style",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1155,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "2cbdc09050ba1346",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "filename",
+        "func": "var filename = global.get('pro7_filename');\nif(filename === \"index.html\"){\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/\" + filename ;\n    return msg;\n}else{\n    msg.filename = \"uibuilder/\" + global.get('pro7_app_name') + \"/src/pages/\" + filename ;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 2700,
+        "wires": [
+            [
+                "177594077dfbf2e8"
+            ]
+        ]
+    },
+    {
+        "id": "177594077dfbf2e8",
+        "type": "file",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 2700,
+        "wires": [
+            [
+                "2d94964de3efee30"
+            ]
+        ]
+    },
+    {
+        "id": "284aba89cf587609",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "update_element_style",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1375,
+        "y": 2700,
+        "wires": []
+    },
+    {
+        "id": "2d94964de3efee30",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "topic",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 2700,
+        "wires": [
+            [
+                "284aba89cf587609"
+            ]
+        ]
+    },
+    {
+        "id": "96c8da8dc425aa8c",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "app_name",
+        "func": "global.set('pro7_app_name', msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1380,
+        "wires": [
+            [
+                "d20f35634ab55497"
+            ]
+        ]
+    },
+    {
+        "id": "d20f35634ab55497",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "set_app_name",
+        "mode": "link",
+        "links": [
+            "30ad7d2320b3ed2e"
+        ],
+        "x": 1095,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "e88f400e54831007",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_app_pages",
+        "func": "var topic = msg.topic;\n\nmsg = {\n    \"topic\": topic,\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1440,
+        "wires": [
+            [
+                "afd38f57df688226"
+            ]
+        ]
+    },
+    {
+        "id": "afd38f57df688226",
+        "type": "link out",
+        "z": "e4184d8f0d35d1a2",
+        "name": "get_app_pages",
+        "mode": "link",
+        "links": [
+            "24bccb0f6c8cbdc5"
+        ],
+        "x": 1115,
+        "y": 1440,
+        "wires": []
+    }
+]

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+
+    <meta name="theme-color" content="#007aff">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>ETTER Creator</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" href="framework7/framework7-bundle.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="view view-main view-init safe-areas">
+            <div class="page" data-name="index">
+                <div class="navbar no-shadow no-border">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">&nbsp;</div>
+                        <div class="title">ETTER Creator</div>
+                        <div class="right">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="card">
+                        <div class="card-content">
+                            <form name="serverInfo" id="serverInfo">
+                                <div class="list no-hairlines no-hairlines-between">
+                                    <ul>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label">Port</div>
+                                                <div class="item-input-wrap">
+                                                    <input name="port" type="text" placeholder="1880" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label">Server Path</div>
+                                                <div class="item-input-wrap">
+                                                    <input name="adminPath" type="text" placeholder="/red" value="/red" disabled />
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row margin">
+                        <div class="col-100">
+                            <a class="button button-fill col" id="start">Start Server</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="framework7/framework7-bundle.min.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript">
+        const { ipcRenderer } = require('electron');
+        let socketPort = ipcRenderer.sendSync('getSocketPort');
+        var fs = require('fs');
+
+
+        fs.readFile("server_config.txt", 'utf-8', (err, data) => {
+            if (err) {
+                fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "/red", "autostart": false}', 'utf-8');
+
+                return;
+            }
+
+            var status = JSON.parse(data);
+            console.log(status);
+            console.log(status.autostart);
+            if (status.autostart === true) {
+                app.dialog.preloader('Auto Start Node-Red');
+
+                sendWebsocket(status.port, status.adminPath);
+            }
+        });
+
+        var url = null;
+
+        function waitForConnection(port, path) {
+            port = port || 1880;
+            path = path || "/red";
+            if (path[0] != "/") path = "/" + path;
+            url = `http://localhost:${port}${path}`;
+
+            function getStatus() {
+                let xml = new XMLHttpRequest();
+                xml.open('GET', url, true);
+                xml.timeout = 1000;
+                xml.onload = function () {
+                    if (this.status == 200) {
+                        app.dialog.close();
+
+                        clearInterval(noderedWindow);
+
+                        app.views.main.router.navigate('/home/');
+                    } else {
+                        // Do Nothing
+                    }
+                }
+                xml.send();
+            }
+
+            var noderedWindow = setInterval(getStatus, 5000);
+        }
+
+        function sendWebsocket(port, path) {
+            port = port || 1880;
+            path = path || "/red";
+            if (path[0] != "/") path = "/" + path;
+            url = `http://localhost:${port}${path}`;
+
+            app.request.get(url)
+                .then(function (res) {
+                    // console.log(res);
+                    if (res.status === 200) {
+                        app.dialog.close();
+
+                        app.views.main.router.navigate('/home/');
+                    }
+                })
+                .catch(function (err) {
+                    if (err.status === 0) { // No Server Started
+                        if ("WebSocket" in window) {
+                            // Let us open a web socket
+
+                            var ws = new WebSocket("ws://localhost:" + socketPort);
+                            ws.onopen = function () {
+                                // Web Socket is connected, send data using send()
+                                var settings = {
+                                    port: port,
+                                    adminPath: "/red",
+                                    nodePath: "/"
+                                };
+
+                                // send configs to background script
+                                ws.send(JSON.stringify(settings));
+                                ws.close();
+
+                                // transition to waiting for start
+                                waitForConnection(settings.port, settings.adminPath);
+                            };
+                        }
+                    }
+                })
+        }
+
+        $(document).on('click', '#start', function () {
+            var formData = app.form.convertToData('#serverInfo');
+
+            app.dialog.confirm('Future Auto Start?', function () {
+                // Yes
+                app.dialog.preloader('Starting Server');
+
+                if (formData.port === "" || formData.port === " ") {
+                    fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "' + formData.adminPath + '", "autostart": true}', 'utf-8');
+                } else {
+                    fs.writeFileSync("server_config.txt", '{"port": ' + formData.port + ' , "adminPath": "' + formData.adminPath + '", "autostart": true}', 'utf-8');
+                }
+
+                sendWebsocket(formData.port, formData.adminPath);
+            }, function () {
+                // No
+                app.dialog.preloader('Starting Server');
+
+                if (formData.port === "" || formData.port === " ") {
+                    fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "' + formData.adminPath + '", "autostart": false}', 'utf-8');
+                } else {
+                    fs.writeFileSync("server_config.txt", '{"port": ' + formData.port + ' , "adminPath": "' + formData.adminPath + '", "autostart": false}', 'utf-8');
+                }
+
+                sendWebsocket(formData.port, formData.adminPath);
+            });
+        });
+    </script>
+</body>
+
+</html>

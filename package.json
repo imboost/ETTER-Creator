@@ -1,0 +1,105 @@
+{
+  "name": "etter-creator",
+  "productName": "ETTER Creator",
+  "version": "0.0.1",
+  "description": " Open Source low code application platform based on Node-RED and Framework7",
+  "main": "src/index.js",
+  "scripts": {
+    "nodered": "node ./src/server.js",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --color"
+  },
+  "author": "CV Infinity Karya Bersama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imboost/ETTER-Creator.git"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "ETTERCreator"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "taufiksu",
+              "name": "ETTERCreator"
+            },
+            "authToken": "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"
+          }
+        }
+      ],
+      "github_repository": {
+        "owner": "taufiksu",
+        "name": "ETTERCreator",
+        "options": {
+          "protocol": "https",
+          "host": "api.github.com"
+        }
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm",
+        "icon": "src/RED.ico"
+      },
+      "electronWinstallerConfig": {
+        "name": "ETTERCreator"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "ETTERCreator"
+      }
+    }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "node-red": "^2.2.2",
+    "node-red-contrib-fs-ops-coco": "^1.6.2",
+    "node-red-contrib-os": "^0.2.1",
+    "node-red-contrib-uibuilder": "^5.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-prebuilt-compile": "8.2.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.26.1"
+  }
+}

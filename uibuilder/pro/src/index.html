@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="theme-dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>ETTER Studio</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" href="framework7/framework7-bundle.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="appbar">
+            <div class="appbar-inner">
+                <div class="left">
+                    <span style="font-size: large;">Studio</span>
+                </div>
+            </div>
+        </div>
+        <div class="view view-main view-init safe-areas">
+            <div class="page" data-name="index">
+                <div class="page-content">
+                    <div style="position: relative;top: 50%;transform: translateY(-50%);text-align: center;">
+                        <div class="row padding">
+                            <div class="col-33"></div>
+                            <div class="col-33">
+                                <img src="https://console.etter.cloud/console/assets/icons/icon-512x512.png" width="128" />
+                                <br />
+                                <p>Studio by <a href="https://console.etter.cloud" class="link external" target="_blank">ETTER</a></p>
+                            </div>
+                            <div class="col-33"></div>
+                        </div>
+                        <div class="row padding">
+                            <div class="col-33"></div>
+                            <a href="/designer/" class="button button-small col-33">Designer</a>
+                            <div class="col-33"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="./uibuilderfe.min.js"></script>
+    <script>
+        uibuilder.start();
+    </script>
+    <script src="framework7/framework7-bundle.min.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/designer.js"></script>
+    <script src="monaco/min/vs/loader.js"></script>
+    <script>
+        require.config({
+            paths: {
+                vs: 'monaco/min/vs'
+            }
+        });
+    </script>
+    <script src="js/pro.js"></script>
+</body>
+
+</html>
