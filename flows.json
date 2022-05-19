@@ -21,7 +21,6 @@
         "templateFolder": "blank",
         "extTemplate": "",
         "showfolder": false,
-        "oldUrl": "editor",
         "reload": false,
         "sourceFolder": "src",
         "deployedVersion": "5.0.1",
@@ -2685,5 +2684,149 @@
         "x": 1115,
         "y": 1440,
         "wires": []
+    },
+    {
+        "id": "abc04adffe94a0be",
+        "type": "fs-ops-dir",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "path": "uibuilder/pro/src",
+        "pathType": "str",
+        "filter": "*",
+        "filterType": "str",
+        "dir": "files",
+        "dirType": "msg",
+        "x": 1100,
+        "y": 80,
+        "wires": [
+            [
+                "86a181c2644dd625"
+            ]
+        ]
+    },
+    {
+        "id": "afc4e1f6ccd83e27",
+        "type": "inject",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "x": 950,
+        "y": 80,
+        "wires": [
+            [
+                "abc04adffe94a0be"
+            ]
+        ]
+    },
+    {
+        "id": "86a181c2644dd625",
+        "type": "function",
+        "z": "e4184d8f0d35d1a2",
+        "name": "if pro installed",
+        "func": "var total_file = msg.files.length;\n\nif(total_file === 3){\n  return [msg, null];  \n}else{\n  return [null, msg]; \n}\n\nreturn msg;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 80,
+        "wires": [
+            [
+                "31ef016c047f9334"
+            ],
+            [
+                "33d9d373c9f7af39"
+            ]
+        ]
+    },
+    {
+        "id": "33d9d373c9f7af39",
+        "type": "debug",
+        "z": "e4184d8f0d35d1a2",
+        "d": true,
+        "name": "Do Nothing",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "fee3560dc7742525",
+        "type": "fs-extra-copy",
+        "z": "e4184d8f0d35d1a2",
+        "name": "",
+        "source": "resources/app/uibuilder/pro/src/",
+        "sourceType": "str",
+        "target": "uibuilder/pro/src/",
+        "targetType": "str",
+        "x": 2030,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0563a9b4c55618ad",
+        "type": "fs-ops-delete",
+        "z": "e4184d8f0d35d1a2",
+        "name": "del index.html",
+        "path": "uibuilder/pro/src",
+        "pathType": "str",
+        "filename": "index.html",
+        "filenameType": "str",
+        "x": 1840,
+        "y": 80,
+        "wires": [
+            [
+                "fee3560dc7742525"
+            ]
+        ]
+    },
+    {
+        "id": "a70ee579c1e1db1c",
+        "type": "fs-ops-delete",
+        "z": "e4184d8f0d35d1a2",
+        "name": "del index.js",
+        "path": "uibuilder/pro/src",
+        "pathType": "str",
+        "filename": "index.js",
+        "filenameType": "str",
+        "x": 1650,
+        "y": 80,
+        "wires": [
+            [
+                "0563a9b4c55618ad"
+            ]
+        ]
+    },
+    {
+        "id": "31ef016c047f9334",
+        "type": "fs-ops-delete",
+        "z": "e4184d8f0d35d1a2",
+        "name": "del index.css",
+        "path": "uibuilder/pro/src",
+        "pathType": "str",
+        "filename": "index.css",
+        "filenameType": "str",
+        "x": 1470,
+        "y": 80,
+        "wires": [
+            [
+                "a70ee579c1e1db1c"
+            ]
+        ]
     }
 ]
