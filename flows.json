@@ -2675,7 +2675,7 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": "0.5",
         "topic": "",
         "x": 970,
