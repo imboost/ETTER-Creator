@@ -107,3 +107,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Additional
+.config.nodes.json
+.config.runtime.json
+.config.users.json
+.config.users.json.backup
+.sessions.json
+server_config.txt

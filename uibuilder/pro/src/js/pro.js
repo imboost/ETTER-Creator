@@ -1,3 +1,6 @@
+$$(document).find('#btn-panel-right').hide();
+$$(document).find('#btn-panel-left').hide();
+
 page_history = app.views.main.history;
 page_count = page_history.length;
 page_current = page_history[page_count - 1];

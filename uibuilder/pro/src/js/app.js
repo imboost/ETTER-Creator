@@ -1,7 +1,7 @@
 var $$ = Dom7;
 
 var app = new Framework7({
-    name: 'Pro7',
+    name: 'UI Builder',
     theme: 'aurora',
     el: '#app',
     routes: routes,

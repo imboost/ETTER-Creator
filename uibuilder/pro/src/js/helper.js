@@ -1,6 +1,4 @@
-/**
- * Panel Morph
- */
+// panel morph left
 var panel_left_morph = function () {
     panel_left = app.panel.create({
         el: '.panel-left'
@@ -21,6 +19,7 @@ var panel_left_morph = function () {
     });
 }
 
+// panel morph right
 var panel_right_morph = function () {
     panel_right = app.panel.create({
         el: '.panel-right'
@@ -64,14 +63,6 @@ function list_search(el_input, el_ul) {
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
-        // a = li[i].getElementById("item-title")[0];
         a = li[i].getElementById('item-content')[0];
-        console.log(a);
-        // txtValue = a.textContent || a.innerText;
-        // if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        //     li[i].style.display = "";
-        // } else {
-        //     li[i].style.display = "none";
-        // }
     }
 }
