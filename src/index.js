@@ -1,4 +1,4 @@
-const debug = "DEV" || process.env.debug || "DEV";
+const debug = "PROD" || process.env.debug || "PROD";
 
 const { app, BrowserWindow, ipcMain, dialog, Menu, MenuItem } = require('electron');
 const fs = require('fs');
@@ -82,6 +82,7 @@ const createWindow = () => {
     width: 480,
     height: 600,
     frame: true,
+    resizable: false,
     webPreferences: {
       nodeIntegration: true
     }
