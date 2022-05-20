@@ -81,6 +81,7 @@
     "electron-compile": "^6.4.4",
     "electron-squirrel-startup": "^1.0.0",
     "node-red": "^2.2.2",
+    "node-red-contrib-etter": "^0.0.3",
     "node-red-contrib-fs-extra": "^1.0.1",
     "node-red-contrib-fs-ops-coco": "^1.6.2",
     "node-red-contrib-os": "^0.2.1",

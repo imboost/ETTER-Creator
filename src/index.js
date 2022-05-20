@@ -38,25 +38,6 @@ var menu_option = [{
   label: 'Menu',
   submenu: [
     {
-      label: 'UI Designer',
-      click() {
-        mainWindow.loadURL("http://127.0.0.1:" + listenPort + url);
-      }
-    },
-    {
-      label: 'Node-RED',
-      click() {
-        mainWindow.loadURL("http://127.0.0.1:" + listenPort + urledit);
-      }
-    },
-    {
-      label: 'ETTER Cloud',
-      click() {
-        mainWindow.loadURL("https://console.etter.cloud");
-      }
-    },
-    { type: 'separator' },
-    {
       role: 'quit'
     }
   ]
@@ -98,8 +79,8 @@ var menu_option = [{
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
+    width: 480,
+    height: 600,
     frame: true,
     webPreferences: {
       nodeIntegration: true
@@ -126,6 +107,7 @@ const createWindow = () => {
   });
 };
 
+// Get socket port for UI to interact start server
 ipcMain.on('getSocketPort', (event, args) => {
   event.returnValue = socketPort;
 });

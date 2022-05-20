@@ -73,11 +73,11 @@
     <script src="js/routes.js"></script>
     <script src="js/app.js"></script>
     <script type="text/javascript">
+        // Get socket port to run
         const { ipcRenderer } = require('electron');
         let socketPort = ipcRenderer.sendSync('getSocketPort');
+
         var fs = require('fs');
-
-
         fs.readFile("server_config.txt", 'utf-8', (err, data) => {
             if (err) {
                 fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "/red", "autostart": false}', 'utf-8');
@@ -96,12 +96,14 @@
         });
 
         var url = null;
+        var url_ui = null;
 
         function waitForConnection(port, path) {
             port = port || 1880;
             path = path || "/red";
             if (path[0] != "/") path = "/" + path;
             url = `http://localhost:${port}${path}`;
+            url_ui = `http://localhost:${port}${'/pro'}`;
 
             function getStatus() {
                 let xml = new XMLHttpRequest();
