@@ -23,6 +23,17 @@ $$(document).on('page:afterin', '.page[data-name="designer"]', function (callbac
     });
 });
 
+$$(document).on('click', '#btn-application-create', function () {
+    var app_name = '';
+    app.dialog.prompt('Application Name?', function (name) {
+        app_name= name.replace(/ /g, "_").replace(/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase();
+        uibuilder.send({
+            "topic": "add_new_app",
+            "app_name": app_name
+        });
+    });
+});
+
 $$(document).on('click', '#btn-application-load', function () {
     var name = $$(this).attr('data-name');
     $$(document).find('#application').empty();

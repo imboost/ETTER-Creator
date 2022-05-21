@@ -44,7 +44,7 @@ uibuilder.onChange('msgsReceived', function (newVal) {
 
     if (msg.topic === "uibuilder_all") {
         $$(document).find('#applications-list').empty();
-        $$(document).find('#applications-list').append('<li class="item-divider">Applications<span style="margin-left: auto;margin-right:0;"><i class="f7-icons" style="font-size: small;cursor: pointer;">plus</i></span></li>');
+        $$(document).find('#applications-list').append('<li class="item-divider">Applications<span style="margin-left: auto;margin-right:0;" id="btn-application-create"><i class="f7-icons" style="font-size: small;cursor: pointer;">plus</i></span></li>');
         $$(document).find('#applications-list').append('<form class="searchbar">' +
             '    <div class="searchbar-inner">' +
             '        <div class="searchbar-input-wrap"> ' +
