@@ -51,7 +51,18 @@ uibuilder.onChange('msgsReceived', function (newVal) {
     }
 
     if (msg.topic === "copy_template_blank") {
-        window.location.replace('/pro/');
+        app.notification.create({
+            icon: '<i class="icon material-icons">notifications</i>',
+            title: 'Notification',
+            subtitle: 'New application created',
+            text: 'UI Builder will restart in view seconds',
+            closeTimeout: 3000,
+            on: {
+                close: function () {
+                    window.location.replace('/pro/');
+                }
+            },
+        }).open();
     }
 
     if (msg.topic === "uibuilder_all") {
