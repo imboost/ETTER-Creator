@@ -38,6 +38,14 @@ var menu_option = [{
   label: 'Menu',
   submenu: [
     {
+      label: 'Restart App',
+      click(item, focusedWindow) {
+        app.relaunch();
+        app.quit();
+      }
+    },
+    { type: 'separator' },
+    {
       role: 'quit'
     }
   ]

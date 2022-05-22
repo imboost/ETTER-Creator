@@ -42,6 +42,18 @@ uibuilder.onChange('msgsReceived', function (newVal) {
         ip_address = msg.payload;
     }
 
+    if (msg.topic === "add_new_app") {
+        uibuilder.send({
+            "topic": "copy_template_blank",
+            "app_source": "uibuilder/" + msg.app_name + "/src/",
+            "app_name": msg.app_name
+        });
+    }
+
+    if (msg.topic === "copy_template_blank") {
+        window.location.replace('/pro/');
+    }
+
     if (msg.topic === "uibuilder_all") {
         $$(document).find('#applications-list').empty();
         $$(document).find('#applications-list').append('<li class="item-divider">Applications<span style="margin-left: auto;margin-right:0;" id="btn-application-create"><i class="f7-icons" style="font-size: small;cursor: pointer;">plus</i></span></li>');
