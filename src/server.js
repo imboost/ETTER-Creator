@@ -59,7 +59,8 @@ module.exports = function (socketPort) {
                         dir: "context"
                     }
                 }
-            }
+            },
+            credentialSecret: "admin"
         };
 
         // Initialise the runtime with a server and settings
