@@ -8,20 +8,25 @@
         </div>
     </div>
     <div class="page-content">
-        <div class="card">
-            <div class="card-content card-content-padding">Server Status :
-                <span class="text-color-teal">Active</span>
+        <div class="block-title margin-top-half">Start Creating Application</div>
+        <div class="row margin-top margin-horizontal-half">
+            <div class="col-33 text-align-center">
+                <img src="img/ui.png" style="width: 70%;" />
+                <a onclick="window.open(url_ui, 'uibuilder', 'frame=true,nodeIntegration=no,width=800,height=600');" class="button col-100 margin-top-half text-color-black">UI Builder</a>
+            </div>
+            <div class="col-33 text-align-center">
+                <img src="img/logic.png" style="width: 70%;" />
+                <a onclick="window.open(url, 'nodered', 'frame=true,nodeIntegration=no,width=800,height=600');" class="button col-100 margin-top-half text-color-black">Logic</a>
+            </div>
+            <div class="col-33 text-align-center">
+                <img src="img/data.png" style="width: 70%;" />
+                <a onclick="window.open(url_etter, 'etter', 'frame=true,nodeIntegration=no,width=800,height=600');" class="button col-100 margin-top-half text-color-black">Data Service</a>
             </div>
         </div>
-        <div class="row margin-horizontal">
-            <div class="col-33">
-                <a onclick="window.open(url_ui, 'uibuilder', 'frame=true,nodeIntegration=no,width=800,height=600');" class="button button-fill col-100 bg-color-gray">UI Builder</a>
-            </div>
-            <div class="col-33">
-                <a onclick="window.open(url, 'nodered', 'frame=true,nodeIntegration=no,width=800,height=600');" class="button button-fill col-100 bg-color-red">Node-RED</a>
-            </div>
-            <div class="col-33">
-                <a onclick="window.open(url_etter, 'etter', 'frame=true,nodeIntegration=no,width=800,height=600');" class="button button-fill col-100 bg-color-blue">Data Service</a>
+        <div class="card margin-top-half">
+            <div class="card-header">About</div>
+            <div class="card-content card-content-padding" style="line-height: 25px;font-size: 15px;">ETTER Creator is an based Open Source Low-Code Platform IDE made by CV Infinity Karya Bersama.
+                <br /><br />This IDE combine using of Electron, Node-RED, uibuilder (node-red-contrib-uibuilder), Framework7, monaco editor and ETTER Cloud Data Service.
             </div>
         </div>
     </div>

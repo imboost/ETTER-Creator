@@ -33,6 +33,12 @@
                 </div>
                 <div class="page-content">
                     <div class="card">
+                        <div class="card-header">Server Configuration</div>
+                        <div class="card-content card-content-padding" style="line-height: 25px;font-size: 15px;">Please start server with Server Port that will not overlap with other Port working on your computer, by default it set to 1880.
+                            <br /><br />If you set to auto start, the future ETTER Creator open will auto start the server with the previous Port configuration.
+                        </div>
+                    </div>
+                    <div class="card">
                         <div class="card-content">
                             <form name="serverInfo" id="serverInfo">
                                 <div class="list no-hairlines no-hairlines-between">
@@ -41,7 +47,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title item-label">Port</div>
                                                 <div class="item-input-wrap">
-                                                    <input name="port" type="text" placeholder="1880" />
+                                                    <input name="port" type="number" placeholder="1880" />
                                                     <span class="input-clear-button"></span>
                                                 </div>
                                             </div>
