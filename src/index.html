@@ -34,8 +34,8 @@
                 <div class="page-content">
                     <div class="card">
                         <div class="card-header">Server Configuration</div>
-                        <div class="card-content card-content-padding" style="line-height: 25px;font-size: 15px;">Please start server with Server Port that will not overlap with other Port working on your computer, by default it set to 1880.
-                            <br /><br />If you set to auto start, the future ETTER Creator open will auto start the server with the previous Port configuration.
+                        <div class="card-content card-content-padding" style="line-height: 25px;font-size: 15px;">Please start server with <span style="background-color: #FDB515;">&nbsp;Server Port&nbsp;</span> that will not overlap with other Port working on your computer, by default it set to <span style="background-color: #FDB515;">&nbsp;1880&nbsp;</span>.
+                            <br /><br />If you set to <span style="background-color: #FDB515;">&nbsp;Auto Start Server&nbsp;</span>, the future ETTER Creator open will auto start the server with the previous Port configuration.
                         </div>
                     </div>
                     <div class="card">
@@ -92,8 +92,6 @@
             }
 
             var status = JSON.parse(data);
-            console.log(status);
-            console.log(status.autostart);
             if (status.autostart === true) {
                 app.dialog.preloader('Auto Start Node-Red');
 
@@ -177,29 +175,47 @@
         $(document).on('click', '#start', function () {
             var formData = app.form.convertToData('#serverInfo');
 
-            app.dialog.confirm('Auto start server in the future?', function () {
-                // Yes
-                app.dialog.preloader('Starting Server');
+            app.dialog.create({
+                title: 'Warning',
+                text: '<span style="background-color: #FDB515;">&nbsp;Auto start&nbsp;</span> server in the future?',
+                buttons: [{
+                    text: 'Cancel',
+                    color: 'gray'
+                },
+                {
+                    text: 'Yes',
+                    color: 'teal',
+                    onClick: function () {
+                        // Yes
+                        app.dialog.preloader('Starting Server');
 
-                if (formData.port === "" || formData.port === " ") {
-                    fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "' + formData.adminPath + '", "autostart": true}', 'utf-8');
-                } else {
-                    fs.writeFileSync("server_config.txt", '{"port": ' + formData.port + ' , "adminPath": "' + formData.adminPath + '", "autostart": true}', 'utf-8');
-                }
+                        if (formData.port === "" || formData.port === " ") {
+                            fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "' + formData.adminPath + '", "autostart": true}', 'utf-8');
+                        } else {
+                            fs.writeFileSync("server_config.txt", '{"port": ' + formData.port + ' , "adminPath": "' + formData.adminPath + '", "autostart": true}', 'utf-8');
+                        }
 
-                sendWebsocket(formData.port, formData.adminPath);
-            }, function () {
-                // No
-                app.dialog.preloader('Starting Server');
+                        sendWebsocket(formData.port, formData.adminPath);
+                    }
+                },
+                {
+                    text: 'No',
+                    color: 'red',
+                    onClick: function () {
+                        // No
+                        app.dialog.preloader('Starting Server');
 
-                if (formData.port === "" || formData.port === " ") {
-                    fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "' + formData.adminPath + '", "autostart": false}', 'utf-8');
-                } else {
-                    fs.writeFileSync("server_config.txt", '{"port": ' + formData.port + ' , "adminPath": "' + formData.adminPath + '", "autostart": false}', 'utf-8');
-                }
+                        if (formData.port === "" || formData.port === " ") {
+                            fs.writeFileSync("server_config.txt", '{"port": 1880 , "adminPath": "' + formData.adminPath + '", "autostart": false}', 'utf-8');
+                        } else {
+                            fs.writeFileSync("server_config.txt", '{"port": ' + formData.port + ' , "adminPath": "' + formData.adminPath + '", "autostart": false}', 'utf-8');
+                        }
 
-                sendWebsocket(formData.port, formData.adminPath);
-            });
+                        sendWebsocket(formData.port, formData.adminPath);
+                    }
+                },
+                ]
+            }).open();
         });
     </script>
 </body>
