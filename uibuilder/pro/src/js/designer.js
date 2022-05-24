@@ -26,7 +26,7 @@ $$(document).on('page:afterin', '.page[data-name="designer"]', function (callbac
 $$(document).on('click', '#btn-application-create', function () {
     var app_name = '';
     app.dialog.prompt('Application Name?', function (name) {
-        app_name= name.replace(/ /g, "_").replace(/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase();
+        app_name = name.replace(/ /g, "_").replace(/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase();
         uibuilder.send({
             "topic": "add_new_app",
             "app_name": app_name
@@ -3799,7 +3799,7 @@ $$(document).on('keypress', '#component-search-input', function (event) {
 
     if (event.keyCode == 13) {
         event.preventDefault();
-        
+
         $$('#items-component > li > div > div > .item-title').each(function () {
             var currentLiText = $$(this).text().toLowerCase();
             if (currentLiText.includes(keyword)) {
@@ -3816,7 +3816,7 @@ $$(document).on('keypress', '#element-search-input', function (event) {
 
     if (event.keyCode == 13) {
         event.preventDefault();
-        
+
         $$('#applications-list > li > div > div > .item-title').each(function () {
             var currentLiText = $$(this).text().toLowerCase();
             if (currentLiText.includes(keyword)) {
@@ -3833,7 +3833,7 @@ $$(document).on('keypress', '#page-search-input', function (event) {
 
     if (event.keyCode == 13) {
         event.preventDefault();
-        
+
         $$('#applications-list > li > div > div > .item-title').each(function () {
             var currentLiText = $$(this).text().toLowerCase();
             if (currentLiText.includes(keyword)) {
@@ -3850,7 +3850,7 @@ $$(document).on('keypress', '#application-search-input', function (event) {
 
     if (event.keyCode == 13) {
         event.preventDefault();
-        
+
         $$('#applications-list > li > div > div > .item-title').each(function () {
             var currentLiText = $$(this).text().toLowerCase();
             if (currentLiText.includes(keyword)) {
@@ -21732,6 +21732,38 @@ $$(document).on('click', '#btn-element-add-icon-zzz', function () {
             "element_id": element_id_selected,
             "component": '<i class="f7-icons">zzz</i>',
             "action": "inner"
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-menu-list-basic', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="list menu-list">\n' +
+                '\t<ul>\n' +
+                '\t\t<li>\n' +
+                '\t\t\t<a href="#" class="item-content item-link item-selected">\n' +
+                '\t\t\t\t<div class="item-inner">\n' +
+                '\t\t\t\t\t<div class="item-title">Item 1</div>\n' +
+                '\t\t\t\t</div>\n' +
+                '\t\t\t</a>\n' +
+                '\t\t</li>\n' +
+                '\t\t<li>\n' +
+                '\t\t\t<a href="#" class="item-content item-link">\n' +
+                '\t\t\t\t<div class="item-inner">\n' +
+                '\t\t\t\t\t<div class="item-title">Item 2</div>\n' +
+                '\t\t\t\t</div>\n' +
+                '\t\t\t</a>\n' +
+                '\t\t</li>\n' +
+                '\t</ul>\n' +
+                '</div>\n',
+            "action": action
         });
     }
 });
