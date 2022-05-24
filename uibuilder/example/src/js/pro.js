@@ -178,9 +178,17 @@ $(document).on('page:afterin', function (callback) {
 
 uibuilder.onChange('msgsReceived', function (newVal) {
     // receive request from pro to navigate
+
     if (msg.topic === "page_navigate") {
         var path = msg.payload;
-        app.views.main.router.navigate(path);
+
+        app.panel.close();
+
+        // app.views.main.router.navigate(path);
+        app.views.main.router.navigate(path, {
+            reloadCurrent: true,
+            ignoreCache: true
+        });
     }
 
     // highlight the element
@@ -226,7 +234,6 @@ uibuilder.onChange('msgsReceived', function (newVal) {
 
     // To Do still fail to update id for class page level but on html element ok
     if (msg.topic === "update_element_id") {
-        // console.log(msg);
         var html_page = app.views.main.$el.find('.page-current');
         html_page.find('#' + msg.element_id_selected).attr('id', msg.element_id).removeClass("highlight-choosed");
         // var html_page = app.views.main.$el.find('#' + msg.element_id_selected);
@@ -249,21 +256,30 @@ uibuilder.onChange('msgsReceived', function (newVal) {
         });
     }
 
-    // Remove element
+    // Remove element 
     if (msg.topic === "remove_element_id") {
-        var html_page = app.views.main.$el.find('.page-current');
-        html_page.find('#' + msg.element_id_selected).remove();
+        // var html_page = app.views.main.$el.find('.page-current');
+        // html_page.find('#' + msg.element_id_selected).remove();
+        var html_page = $(document).find('#' + msg.element_id_selected);
+        html_page.remove();
 
-        uibuilder.send({
-            "topic": "remove_element_id",
-            "payload": html_beautify(html_page[0].outerHTML)
-        });
+        app.panel.close();
 
-        // this router will trigger afterin so the tree element reloaded also
-        app.views.main.router.navigate(app.views.main.router.currentRoute.url, {
-            reloadCurrent: true,
-            ignoreCache: true
-        });
+        setTimeout(function () {
+            // var html_page = app.views.main.$el.find('.page-current');
+            var html_page = $(document).find('.page-current');
+
+            uibuilder.send({
+                "topic": "remove_element_id",
+                "payload": html_beautify(html_page[0].outerHTML)
+            });
+
+            // this router will trigger afterin so the tree element reloaded also
+            app.views.main.router.navigate(app.views.main.router.currentRoute.url, {
+                reloadCurrent: true,
+                ignoreCache: true
+            });
+        }, 2000);
     }
 
     // Add UI component
@@ -284,28 +300,61 @@ uibuilder.onChange('msgsReceived', function (newVal) {
                 // Do Notihing
             });
         } else {
-            if (msg.action === "inner") {
-                html_page.find("#" + msg.element_id).html(msg.component);
-            } else if (msg.action === "append") {
-                html_page.find("#" + msg.element_id).append(msg.component);
-            } else if (msg.action === "prepend") {
-                html_page.find("#" + msg.element_id).prepend(msg.component);
-            } else if (msg.action === "before") {
-                html_page.find("#" + msg.element_id).parent().prepend(msg.component);
-            } else if (msg.action === "after") {
-                html_page.find("#" + msg.element_id).parent().append(msg.component);
-            } else if (msg.action === "replace_before") {
-                html_page.find("#" + msg.element_id).parent().prepend(msg.component);
-                html_page.find("#" + msg.element_id).remove();
-            } else if (msg.action === "replace_after") {
-                html_page.find("#" + msg.element_id).parent().append(msg.component);
-                html_page.find("#" + msg.element_id).remove();
-            }
+            if (html_page.find("#" + msg.element_id).length === 0) { // for panel view
+                var html_page = $(document).find("#" + msg.element_id);
 
-            uibuilder.send({
-                "topic": "add_element_component",
-                "payload": html_beautify(html_page[0].outerHTML)
-            });
+                if (msg.action === "inner") {
+                    html_page.html(msg.component);
+                } else if (msg.action === "append") {
+                    html_page.append(msg.component);
+                } else if (msg.action === "prepend") {
+                    html_page.prepend(msg.component);
+                } else if (msg.action === "before") {
+                    html_page.parent().prepend(msg.component);
+                } else if (msg.action === "after") {
+                    html_page.parent().append(msg.component);
+                } else if (msg.action === "replace_before") {
+                    html_page.parent().prepend(msg.component);
+                    html_page.remove();
+                } else if (msg.action === "replace_after") {
+                    html_page.parent().append(msg.component);
+                    html_page.remove();
+                }
+
+                app.panel.close();
+
+                setTimeout(function () {
+                    html_page = app.views.main.$el.find('.page-current');
+
+                    uibuilder.send({
+                        "topic": "add_element_component",
+                        "payload": html_beautify(html_page[0].outerHTML)
+                    });
+                }, 2000);
+            } else { // for main center
+                if (msg.action === "inner") {
+                    html_page.find("#" + msg.element_id).html(msg.component);
+                } else if (msg.action === "append") {
+                    html_page.find("#" + msg.element_id).append(msg.component);
+                } else if (msg.action === "prepend") {
+                    html_page.find("#" + msg.element_id).prepend(msg.component);
+                } else if (msg.action === "before") {
+                    html_page.find("#" + msg.element_id).parent().prepend(msg.component);
+                } else if (msg.action === "after") {
+                    html_page.find("#" + msg.element_id).parent().append(msg.component);
+                } else if (msg.action === "replace_before") {
+                    html_page.find("#" + msg.element_id).parent().prepend(msg.component);
+                    html_page.find("#" + msg.element_id).remove();
+                } else if (msg.action === "replace_after") {
+                    html_page.find("#" + msg.element_id).parent().append(msg.component);
+                    html_page.find("#" + msg.element_id).remove();
+                }
+
+                uibuilder.send({
+                    "topic": "add_element_component",
+                    "payload": html_beautify(html_page[0].outerHTML)
+                });
+            }
         }
     }
 
@@ -346,8 +395,10 @@ uibuilder.onChange('msgsReceived', function (newVal) {
         });
     }
 
+    // Get Class of HTML element
     if (msg.topic === "get_element_class") {
-        var html_page = app.views.main.$el.find('#' + msg.element_id);
+        // var html_page = app.views.main.$el.find('#' + msg.element_id);
+        var html_page = $(document).find('#' + msg.element_id);
 
         var classList = html_page.attr('class');
 
@@ -357,98 +408,122 @@ uibuilder.onChange('msgsReceived', function (newVal) {
         });
     }
 
+    // Remove Class from HTML element
     if (msg.topic === "class_remove") {
-        var html_page = app.views.main.$el.find('.page-current');
-        html_page.find('#' + msg.element_id).removeClass(msg.class_name);
-        html_page.find('#' + msg.element_id).removeClass("highlight-choosed");
+        // var html_page = app.views.main.$el.find('.page-current');
+        var html_page = $(document).find('#' + msg.element_id);
 
-        uibuilder.send({
-            "topic": "class_remove",
-            "payload": html_beautify(html_page[0].outerHTML),
-            "element_id": msg.element_id
-        });
+        // html_page.find('#' + msg.element_id).removeClass(msg.class_name);
+        // html_page.find('#' + msg.element_id).removeClass("highlight-choosed");
+        html_page.removeClass(msg.class_name);
+        html_page.removeClass("highlight-choosed");
 
-        // Reload tree elements
-        var html_elements = html_page.find('*');
+        app.panel.close();
 
-        var elements = [];
-        var i = 0;
-        for (i = 0; i < html_elements.length; i++) {
-            // element name
-            var element_name = html_elements[i].localName;
+        setTimeout(function () {
+            html_page = $(document).find('.page-current');
 
-            // element class
-            var classList = "";
-            var j = 0;
-            for (j = 0; j < html_elements[i].classList.length; j++) {
-                classList = classList + '.' + html_elements[i].classList[j];
+            uibuilder.send({
+                "topic": "class_remove",
+                "payload": html_beautify(html_page[0].outerHTML),
+                "element_id": msg.element_id
+            });
+
+            // Reload tree elements
+            var html_elements = html_page.find('*');
+
+            var elements = [];
+            var i = 0;
+            for (i = 0; i < html_elements.length; i++) {
+                // element name
+                var element_name = html_elements[i].localName;
+
+                // element class
+                var classList = "";
+                var j = 0;
+                for (j = 0; j < html_elements[i].classList.length; j++) {
+                    classList = classList + '.' + html_elements[i].classList[j];
+                }
+
+                // element id
+                var element_id = html_elements[i].id;
+
+                elements.push({
+                    "classList": classList,
+                    "id": element_id,
+                    "name": element_name
+                });
             }
 
-            // element id
-            var element_id = html_elements[i].id;
-
-            elements.push({
-                "classList": classList,
-                "id": element_id,
-                "name": element_name
+            uibuilder.send({
+                "topic": "get_page_elements",
+                "payload": elements,
             });
-        }
 
-        uibuilder.send({
-            "topic": "get_page_elements",
-            "payload": elements,
-        });
-
-        html_page.find('#' + msg.element_id).addClass("highlight-choosed");
+            html_page.find('#' + msg.element_id).addClass("highlight-choosed");
+        }, 2000);
     }
 
+    // Add Class to HTML element
     if (msg.topic === "class_add") {
-        var html_page = app.views.main.$el.find('.page-current');
-        html_page.find('#' + msg.element_id).addClass(msg.class_name);
-        html_page.find('#' + msg.element_id).removeClass("highlight-choosed");
+        // var html_page = app.views.main.$el.find('.page-current');
+        var html_page = $(document).find('#' + msg.element_id);
 
-        uibuilder.send({
-            "topic": "class_add",
-            "payload": html_beautify(html_page[0].outerHTML),
-            "element_id": msg.element_id
-        });
+        // html_page.find('#' + msg.element_id).addClass(msg.class_name);
+        // html_page.find('#' + msg.element_id).removeClass("highlight-choosed");
+        html_page.addClass(msg.class_name);
+        html_page.removeClass("highlight-choosed");
 
-        // Reload tree elements
-        var html_elements = html_page.find('*');
+        app.panel.close();
 
-        var elements = [];
-        var i = 0;
-        for (i = 0; i < html_elements.length; i++) {
-            // element name
-            var element_name = html_elements[i].localName;
+        setTimeout(function () {
+            html_page = $(document).find('.page-current');
 
-            // element class
-            var classList = "";
-            var j = 0;
-            for (j = 0; j < html_elements[i].classList.length; j++) {
-                classList = classList + '.' + html_elements[i].classList[j];
+            uibuilder.send({
+                "topic": "class_add",
+                "payload": html_beautify(html_page[0].outerHTML),
+                "element_id": msg.element_id
+            });
+
+            // Reload tree elements
+            var html_elements = html_page.find('*');
+
+            var elements = [];
+            var i = 0;
+            for (i = 0; i < html_elements.length; i++) {
+                // element name
+                var element_name = html_elements[i].localName;
+
+                // element class
+                var classList = "";
+                var j = 0;
+                for (j = 0; j < html_elements[i].classList.length; j++) {
+                    classList = classList + '.' + html_elements[i].classList[j];
+                }
+
+                // element id
+                var element_id = html_elements[i].id;
+
+                elements.push({
+                    "classList": classList,
+                    "id": element_id,
+                    "name": element_name
+                });
             }
 
-            // element id
-            var element_id = html_elements[i].id;
-
-            elements.push({
-                "classList": classList,
-                "id": element_id,
-                "name": element_name
+            uibuilder.send({
+                "topic": "get_page_elements",
+                "payload": elements,
             });
-        }
 
-        uibuilder.send({
-            "topic": "get_page_elements",
-            "payload": elements,
-        });
-
-        html_page.find('#' + msg.element_id).addClass("highlight-choosed");
+            html_page.find('#' + msg.element_id).addClass("highlight-choosed");
+        }, 2000);
     }
 
+    // Get Style CSS of HTML element
     if (msg.topic === "get_element_style") {
-        var html_page = app.views.main.$el.find('#' + msg.element_id);
+        // var html_page = app.views.main.$el.find('#' + msg.element_id);
+        var html_page = $(document).find('#' + msg.element_id);
 
         var style = html_page.attr('style');
 
@@ -459,22 +534,34 @@ uibuilder.onChange('msgsReceived', function (newVal) {
         });
     }
 
-    if (msg.topic === "update_element_style") {
-        var html_page = app.views.main.$el.find('.page-current');
-        html_page.find('#' + msg.element_id).attr('style', msg.element_css);
-        html_page.find('#' + msg.element_id).removeClass("highlight-choosed");
-        html_page.find('#' + msg.element_id).removeClass("highlight");
+    if (msg.topic === "update_element_style") { // this function call when click on element choosed
+        // var html_page = app.views.main.$el.find('.page-current');
+        // html_page.find('#' + msg.element_id).attr('style', msg.element_css);
+        // html_page.find('#' + msg.element_id).removeClass("highlight-choosed");
+        // html_page.find('#' + msg.element_id).removeClass("highlight");
 
-        uibuilder.send({
-            "topic": "update_element_style",
-            "payload": html_beautify(html_page[0].outerHTML)
-        });
+        var html_page = $(document).find('#' + msg.element_id);
+        html_page.attr('style', msg.element_css);
+        html_page.removeClass("highlight-choosed");
+        html_page.removeClass("highlight");
 
-        html_page.find('#' + msg.element_id).addClass("highlight-choosed");
+        app.panel.close(); // This will close when element selected, no other choice currently
+
+        setTimeout(function () {
+            html_page = $(document).find('.page-current');
+
+            uibuilder.send({
+                "topic": "update_element_style",
+                "payload": html_beautify(html_page[0].outerHTML)
+            });
+
+            html_page.find('#' + msg.element_id).addClass("highlight-choosed");
+        }, 2000);
     }
 
+    // Get Routes of Pages
     if (msg.topic === "get_app_pages") {
-        // get all route/page
+        // request all route/page
         uibuilder.send({
             "topic": "get_routes_js",
             "payload": ""
