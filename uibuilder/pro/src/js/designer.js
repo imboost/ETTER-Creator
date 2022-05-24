@@ -22025,7 +22025,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-password', function 
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Password</div>\n" +
@@ -22051,7 +22051,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-email', function () 
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">E-mail</div>\n" +
@@ -22077,7 +22077,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-url', function () {
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">URL</div>\n" +
@@ -22103,7 +22103,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-phone', function () 
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Phone</div>\n" +
@@ -22130,7 +22130,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-option', function ()
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Gender</div>\n" +
@@ -22158,7 +22158,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-date', function () {
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Birthday</div>\n" +
@@ -22183,7 +22183,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-date-time', function
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Date time</div>\n" +
@@ -22208,7 +22208,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-range', function () 
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Range</div>\n" +
@@ -22235,7 +22235,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-textarea', function 
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Textarea</div>\n" +
@@ -22260,7 +22260,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-textearea-grow', fun
             "element_id": element_id_selected,
             "component": "<li class=\"item-content item-input\">\n" +
                 "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon demo-list-icon\"></i>\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
                 "\t</div>\n" +
                 "\t<div class=\"item-inner\">\n" +
                 "\t\t<div class=\"item-title item-label\">Resizable</div>\n" +
