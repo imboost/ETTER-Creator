@@ -110,6 +110,7 @@ dist
 
 # Additional
 .config.nodes.json
+.config.nodes.json.backup
 .config.runtime.json
 .config.runtime.json.backup
 .config.users.json
