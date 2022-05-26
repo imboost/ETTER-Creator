@@ -22843,3 +22843,231 @@ $$(document).on('click', '.btn-element-add-form-float-item-textarea-grow', funct
         });
     }
 });
+
+$$(document).on('click', '.btn-element-add-form-validate-item-text', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input item-input-with-info\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title item-label\">Name</div>\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Your name\" required validate/>\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t\t<div class=\"item-input-info\">Default required validation</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-validate-item-pattern', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input item-input-with-info\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title item-label\">Fruit</div>\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Type 'apple' or 'banana'\" required validate pattern=\"apple|banana\"/>\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t\t<div class=\"item-input-info\">Pattern validation (<b>apple|banana</b>)</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-validate-item-email', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input item-input-with-info\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title item-label\">E-mail</div>\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"email\" placeholder=\"Your e-mail\" required validate/>\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t\t<div class=\"item-input-info\">Default e-mail validation</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-validate-item-url', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input item-input-with-info\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title item-label\">URL</div>\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"url\" placeholder=\"URL\" required validate/>\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t\t<div class=\"item-input-info\">Default URL validation</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-validate-item-phone', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input item-input-with-info\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title item-label\">Phone</div>\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Your phone number\" required validate pattern=\"[0-9]*\" data-error-message=\"Only numbers please!\"/>\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t\t<div class=\"item-input-info\">With custom error message</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-simple-item-text', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input\">\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Your name\" />\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-simple-item-icon', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Your name\" />\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-simple-item-label', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input\">\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title item-label\">Name</div>\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Your name\" />\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-form-simple-item-info', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content item-input item-input-with-info\">\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-input-wrap\">\n" +
+                "\t\t\t<input type=\"text\" placeholder=\"Your name\" />\n" +
+                "\t\t\t<span class=\"input-clear-button\"></span>\n" +
+                "\t\t\t<div class=\"item-input-info\">Full name please</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
