@@ -22457,7 +22457,7 @@ $$(document).on('click', '.btn-element-add-form-stack-item-date', function () {
     }
 });
 
-$$(document).on('click', '.btn-element-add-form-stack-item-datetime', function () {
+$$(document).on('click', '.btn-element-add-form-stack-item-date-time', function () {
     var action = $$(this).attr('data-action');
 
     if (element_id_selected === null) {
@@ -22709,83 +22709,6 @@ $$(document).on('click', '.btn-element-add-form-float-item-option', function () 
                 "\t\t\t\t<option value=\"Male\">Male</option>\n" +
                 "\t\t\t\t<option value=\"Female\">Female</option>\n" +
                 "\t\t\t</select>\n" +
-                "\t\t</div>\n" +
-                "\t</div>\n" +
-                "</li>\n",
-            "action": action
-        });
-    }
-});
-
-$$(document).on('click', '.btn-element-add-form-float-item-date', function () {
-    var action = $$(this).attr('data-action');
-
-    if (element_id_selected === null) {
-        app.dialog.alert('Choose element to modify!');
-    } else {
-        uibuilder.send({
-            "topic": "add_element_component",
-            "element_id": element_id_selected,
-            "component": "<li class=\"item-content item-input\">\n" +
-                "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
-                "\t</div>\n" +
-                "\t<div class=\"item-inner\">\n" +
-                "\t\t<div class=\"item-title item-floating-label\">Birthday</div>\n" +
-                "\t\t<div class=\"item-input-wrap\">\n" +
-                "\t\t\t<input type=\"date\" value=\"2014-04-30\" placeholder=\"Please choose...\" />\n" +
-                "\t\t</div>\n" +
-                "\t</div>\n" +
-                "</li>\n",
-            "action": action
-        });
-    }
-});
-
-$$(document).on('click', '.btn-element-add-form-float-item-datetime', function () {
-    var action = $$(this).attr('data-action');
-
-    if (element_id_selected === null) {
-        app.dialog.alert('Choose element to modify!');
-    } else {
-        uibuilder.send({
-            "topic": "add_element_component",
-            "element_id": element_id_selected,
-            "component": "<li class=\"item-content item-input\">\n" +
-                "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
-                "\t</div>\n" +
-                "\t<div class=\"item-inner\">\n" +
-                "\t\t<div class=\"item-title item-floating-label\">Date time</div>\n" +
-                "\t\t<div class=\"item-input-wrap\">\n" +
-                "\t\t\t<input type=\"datetime-local\" placeholder=\"Please choose...\" />\n" +
-                "\t\t</div>\n" +
-                "\t</div>\n" +
-                "</li>\n",
-            "action": action
-        });
-    }
-});
-
-$$(document).on('click', '.btn-element-add-form-float-item-range', function () {
-    var action = $$(this).attr('data-action');
-
-    if (element_id_selected === null) {
-        app.dialog.alert('Choose element to modify!');
-    } else {
-        uibuilder.send({
-            "topic": "add_element_component",
-            "element_id": element_id_selected,
-            "component": "<li class=\"item-content item-input\">\n" +
-                "\t<div class=\"item-media\">\n" +
-                "\t\t<i class=\"icon f7-icons\">pencil_ellipsis_rectangle</i>\n" +
-                "\t</div>\n" +
-                "\t<div class=\"item-inner\">\n" +
-                "\t\t<div class=\"item-title item-floating-label\">Range</div>\n" +
-                "\t\t<div class=\"item-input-wrap\">\n" +
-                "\t\t\t<div class=\"range-slider range-slider-init\" data-label=\"true\">\n" +
-                "\t\t\t\t<input type=\"range\" value=\"50\" min=\"0\" max=\"100\" step=\"1\" />\n" +
-                "\t\t\t</div>\n" +
                 "\t\t</div>\n" +
                 "\t</div>\n" +
                 "</li>\n",
