@@ -128,7 +128,7 @@ $(document).on('page:afterin', function (callback) {
                 });
             }
 
-            // To Do get all page tags/element
+            // get all page tags/element
             var html_page = app.views.main.$el.find('.page-current');
             var html_elements = html_page.find('*');
 
@@ -171,6 +171,30 @@ $(document).on('page:afterin', function (callback) {
             uibuilder.send({
                 "topic": "get_page_elements",
                 "payload": elements,
+            });
+
+            // Element cleaner
+            var cleaner_html_page = $(document).find('.page-current');
+            
+            // Remove range bar
+            var range_bar = cleaner_html_page.find('.range-bar');
+            var j = 0;
+            for (j = 0; j < range_bar.length - 1; j++) {
+                var id = $(range_bar[j]).attr('id');
+                cleaner_html_page.find('#' + id).remove();
+            }
+
+            // Remove range knob
+            var range_knob = cleaner_html_page.find('.range-knob-wrap');
+            var k = 0;
+            for (k = 0; k < range_knob.length - 1; k++) {
+                var id = $(range_knob[k]).attr('id');
+                cleaner_html_page.find('#' + id).remove();
+            }
+
+            uibuilder.send({
+                "topic": "set_element_id",
+                "payload": html_beautify(cleaner_html_page[0].outerHTML)
             });
         }
     }
