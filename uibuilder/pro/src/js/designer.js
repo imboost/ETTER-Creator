@@ -22249,7 +22249,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-textarea', function 
     }
 });
 
-$$(document).on('click', '.btn-element-add-form-inline-item-textearea-grow', function () {
+$$(document).on('click', '.btn-element-add-form-inline-item-textarea-grow', function () {
     var action = $$(this).attr('data-action');
 
     if (element_id_selected === null) {
