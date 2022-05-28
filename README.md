@@ -1,2 +1,2 @@
-# ETTER-Creator
-Open Source low code application platform based on Node-RED and Framework7 
+# ETTER Creator
+Open Source Low-Code Platform based on Node-RED, uibuilder and Framework7.
