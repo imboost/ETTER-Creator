@@ -21982,7 +21982,7 @@ $$(document).on('click', '.btn-element-add-form', function () {
                 "\t\t\t</li>\n" +
                 "\t\t</ul>\n" +
                 "\t</div>\n" +
-                "</form>",
+                "</form>\n",
             "action": action
         });
     }
@@ -22242,7 +22242,7 @@ $$(document).on('click', '.btn-element-add-form-inline-item-textarea', function 
                 "\t\t\t<textarea placeholder=\"Bio\"></textarea>\n" +
                 "\t\t</div>\n" +
                 "\t</div>\n" +
-                "</li>",
+                "</li>\n",
             "action": action
         });
     }
@@ -22787,7 +22787,7 @@ $$(document).on('click', '.btn-element-add-form-validate-item-text', function ()
                 "\t\t\t<div class=\"item-input-info\">Default required validation</div>\n" +
                 "\t\t</div>\n" +
                 "\t</div>\n" +
-                "</li>",
+                "</li>\n",
             "action": action
         });
     }
@@ -22814,7 +22814,7 @@ $$(document).on('click', '.btn-element-add-form-validate-item-pattern', function
                 "\t\t\t<div class=\"item-input-info\">Pattern validation (<b>apple|banana</b>)</div>\n" +
                 "\t\t</div>\n" +
                 "\t</div>\n" +
-                "</li>",
+                "</li>\n",
             "action": action
         });
     }
@@ -22841,7 +22841,7 @@ $$(document).on('click', '.btn-element-add-form-validate-item-email', function (
                 "\t\t\t<div class=\"item-input-info\">Default e-mail validation</div>\n" +
                 "\t\t</div>\n" +
                 "\t</div>\n" +
-                "</li>",
+                "</li>\n",
             "action": action
         });
     }
@@ -23434,7 +23434,7 @@ $$(document).on('click', '.btn-element-add-list-simple', function () {
                 "\t\t<li>Item 2</li>\n" +
                 "\t\t<li>Item 3</li>\n" +
                 "\t</ul>\n" +
-                "</div>",
+                "</div>\n",
             "action": action
         });
     }
@@ -23463,7 +23463,22 @@ $$(document).on('click', '.btn-element-add-list', function () {
                 "\t\t\t</div>\n" +
                 "\t\t</li>\n" +
                 "\t</ul>\n" +
-                "</div>",
+                "</div>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-simple', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>Item 1</li>\n",
             "action": action
         });
     }
