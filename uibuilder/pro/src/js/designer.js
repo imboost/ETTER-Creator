@@ -22994,3 +22994,54 @@ $$(document).on('click', '.btn-element-add-form-simple-item-info', function () {
         });
     }
 });
+
+$$(document).on('click', '.btn-element-add-list-simple', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"list simple-list\">\n" +
+                "\t<ul>\n" +
+                "\t\t<li>Item 1</li>\n" +
+                "\t\t<li>Item 2</li>\n" +
+                "\t\t<li>Item 3</li>\n" +
+                "\t</ul>\n" +
+                "</div>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"list\">\n"+
+            "\t<ul>\n"+
+            "\t\t<li>\n"+
+            "\t\t\t<div class=\"item-content\">\n"+
+            "\t\t\t\t<div class=\"item-media\">\n"+
+            "\t\t\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n"+
+            "\t\t\t\t</div>\n"+
+            "\t\t\t\t<div class=\"item-inner\">\n"+
+            "\t\t\t\t\t<div class=\"item-title\">Ivan Petrov</div>\n"+
+            "\t\t\t\t\t<div class=\"item-after\">CEO</div>\n"+
+            "\t\t\t\t</div>\n"+
+            "\t\t\t</div>\n"+
+            "\t\t</li>\n"+
+            "\t</ul>\n"+
+            "</div>",
+            "action": action
+        });
+    }
+});
+
