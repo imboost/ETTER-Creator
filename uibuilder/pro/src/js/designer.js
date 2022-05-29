@@ -22118,7 +22118,6 @@ $$(document).on('click', '.btn-element-add-form-inline-item-phone', function () 
     }
 });
 
-
 $$(document).on('click', '.btn-element-add-form-inline-item-option', function () {
     var action = $$(this).attr('data-action');
 
@@ -22995,6 +22994,431 @@ $$(document).on('click', '.btn-element-add-form-simple-item-info', function () {
     }
 });
 
+$$(document).on('click', '.btn-element-add-grid-row', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="row">\n' +
+                '\tR{1}\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-row-no-gap', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="row no-gap">\n' +
+                '\tR{1}\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col">\n' +
+                '\tC{1}\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-5', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-5">\n' +
+                '\tcol-5\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-10', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-10">\n' +
+                '\tcol-10\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-15', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-15">\n' +
+                '\tcol-15\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-20', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-20">\n' +
+                '\tcol-20\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-25', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-25">\n' +
+                '\tcol-25\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-30', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-30">\n' +
+                '\tcol-30\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-33', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-33">\n' +
+                '\tcol-33\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-35', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-35">\n' +
+                '\tcol-35\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-40', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-40">\n' +
+                '\tcol-40\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-45', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-45">\n' +
+                '\tcol-45\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-50', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-50">\n' +
+                '\tcol-50\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-55', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-55">\n' +
+                '\tcol-55\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-60', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-60">\n' +
+                '\tcol-60\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-65', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-65">\n' +
+                '\tcol-65\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-66', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-66">\n' +
+                '\tcol-66\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-70', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-70">\n' +
+                '\tcol-70\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-75', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-75">\n' +
+                '\tcol-75\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-80', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-80">\n' +
+                '\tcol-80\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-85', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-85">\n' +
+                '\tcol-85\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-90', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-90">\n' +
+                '\tcol-90\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-95', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-95">\n' +
+                '\tcol-95\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-100', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-100">\n' +
+                '\tcol-100\n' +
+                '</div>\n',
+            'action': action
+        });
+    }
+});
+
 $$(document).on('click', '.btn-element-add-list-simple', function () {
     var action = $$(this).attr('data-action');
 
@@ -23025,23 +23449,22 @@ $$(document).on('click', '.btn-element-add-list', function () {
         uibuilder.send({
             "topic": "add_element_component",
             "element_id": element_id_selected,
-            "component": "<div class=\"list\">\n"+
-            "\t<ul>\n"+
-            "\t\t<li>\n"+
-            "\t\t\t<div class=\"item-content\">\n"+
-            "\t\t\t\t<div class=\"item-media\">\n"+
-            "\t\t\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n"+
-            "\t\t\t\t</div>\n"+
-            "\t\t\t\t<div class=\"item-inner\">\n"+
-            "\t\t\t\t\t<div class=\"item-title\">Ivan Petrov</div>\n"+
-            "\t\t\t\t\t<div class=\"item-after\">CEO</div>\n"+
-            "\t\t\t\t</div>\n"+
-            "\t\t\t</div>\n"+
-            "\t\t</li>\n"+
-            "\t</ul>\n"+
-            "</div>",
+            "component": "<div class=\"list\">\n" +
+                "\t<ul>\n" +
+                "\t\t<li>\n" +
+                "\t\t\t<div class=\"item-content\">\n" +
+                "\t\t\t\t<div class=\"item-media\">\n" +
+                "\t\t\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t\t\t</div>\n" +
+                "\t\t\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t\t\t<div class=\"item-title\">Ivan Petrov</div>\n" +
+                "\t\t\t\t\t<div class=\"item-after\">CEO</div>\n" +
+                "\t\t\t\t</div>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t</li>\n" +
+                "\t</ul>\n" +
+                "</div>",
             "action": action
         });
     }
 });
-
