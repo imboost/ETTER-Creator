@@ -635,8 +635,6 @@ var editorPopup = app.popup.create({
         open: function (popup) {
             app.preloader.show();
 
-            // TODO Get code and load
-
             require(['vs/editor/editor.main'], function () {
                 editor = monaco.editor.create(document.getElementById('editor'), {
                     value: [page_opened].join('\n'),
@@ -664,6 +662,7 @@ var editorPopup = app.popup.create({
 
             setTimeout(function () {
                 app.preloader.hide();
+
                 $$(document).find(".margin[role=presentation]").removeClass('margin');
             }, 1000)
         }
@@ -674,13 +673,10 @@ editorPopup.on('closed', function (popup) {
     editor.dispose();
 });
 
-$$('#editor-popup').on('click', function () {
-    console.log('here');
+$$(document).on('click', '#editor-popup', function () {
     if (page_opened === null) {
-        console.log('1');
         app.dialog.alert('Please choose element to edit!');
     } else {
-        console.log('2');
         editorPopup.open();
     }
 });

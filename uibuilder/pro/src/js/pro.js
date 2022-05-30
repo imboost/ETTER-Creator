@@ -186,7 +186,7 @@ uibuilder.onChange('msgsReceived', function (newVal) {
 
         app.tooltip.create({
             targetEl: '.tooltip-remove-element',
-            text: 'Remove Element',
+            text: 'Remove',
         });
 
         // $$(document).find('#element_list').empty();
