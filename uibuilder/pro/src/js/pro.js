@@ -170,19 +170,24 @@ uibuilder.onChange('msgsReceived', function (newVal) {
 
         var i = 0;
         for (i = 0; i < msg.payload.length; i++) {
-            $$(document).find('#applications-list').append('<li class="btn-tree-choose" data-id="' + msg.payload[i].id + '">' +
+            $$(document).find('#applications-list').append('<li>' +
                 '    <div class="item-content">' +
                 '        <div class="item-inner">' +
                 '           <div class="item-title" style="cursor: pointer;font-size: small;">' +
-                '               <i class="f7-icons text-color-red margin-right" id="btn-remove-element" data-id="' + msg.payload[i].id + '" style="font-size: small;cursor: pointer;">trash</i>' +
-                '               <span class="text-color-orange">' + msg.payload[i].name + '</span>' +
-                '               <span class="text-color-green" style="font-size: large;">#' + msg.payload[i].id + '</span>&nbsp;' +
-                msg.payload[i].classList +
+                '               <i class="f7-icons text-color-red margin-right tooltip-remove-element" id="btn-remove-element" data-id="' + msg.payload[i].id + '" style="font-size: small;cursor: pointer;">trash</i>' +
+                '               <span class="text-color-orange btn-tree-choose" data-id="' + msg.payload[i].id + '">' + msg.payload[i].name + '</span>' +
+                '               <span class="text-color-green btn-tree-choose" data-id="' + msg.payload[i].id + '" style="font-size: large;">#' + msg.payload[i].id + '</span>&nbsp;' +
+                '               <span class="btn-tree-choose" data-id="' + msg.payload[i].id + '">' + msg.payload[i].classList + '</span>' +
                 '           </div>' +
                 '        </div>' +
                 '    </div>' +
                 '</li>');
         }
+
+        app.tooltip.create({
+            targetEl: '.tooltip-remove-element',
+            text: 'Remove Element',
+        });
 
         // $$(document).find('#element_list').empty();
 
