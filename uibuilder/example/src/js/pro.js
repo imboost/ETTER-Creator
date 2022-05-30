@@ -175,7 +175,7 @@ $(document).on('page:afterin', function (callback) {
 
             // Element cleaner
             var cleaner_html_page = $(document).find('.page-current');
-            
+
             // Remove range bar
             var range_bar = cleaner_html_page.find('.range-bar');
             var j = 0;
@@ -268,6 +268,14 @@ uibuilder.onChange('msgsReceived', function (newVal) {
             "topic": "update_element_id",
             "payload": html_beautify(html_page[0].outerHTML)
         });
+
+        setTimeout(function () {
+            // this router will trigger afterin so the tree element reloaded also
+            app.views.main.router.navigate(app.views.main.router.currentRoute.url, {
+                reloadCurrent: true,
+                ignoreCache: true
+            });
+        }, 1000);
     }
 
     // update page data-name
