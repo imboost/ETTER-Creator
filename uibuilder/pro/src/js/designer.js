@@ -23841,3 +23841,252 @@ $$(document).on('click', '.btn-element-add-list-item-devider', function () {
         });
     }
 });
+
+// Grid Col Template
+$$(document).on('click', '.btn-element-add-grid-col-template-10-90', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-10">10%</div>\n' +
+				'<div class="col-90">90%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-20-80', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-20">20%</div>\n' +
+				'<div class="col-80">80%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-25-75', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-25">25%</div>\n' +
+				'<div class="col-75">75%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-30-70', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-30">30%</div>\n' +
+				'<div class="col-70">70%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-33-66', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-33">33%</div>\n' +
+				'<div class="col-66">66%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-40-60', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-40">40%</div>\n' +
+				'<div class="col-60">60%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-50-50', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-50">50%</div>\n' +
+				'<div class="col-50">50%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-60-40', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-60">60%</div>\n' +
+				'<div class="col-40">40%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-66-33', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-66">66%</div>\n' +
+				'<div class="col-33">33%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-70-30', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-70">70%</div>\n' +
+				'<div class="col-30">30%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-75-25', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-75">75%</div>\n' +
+				'<div class="col-25">25%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-80-20', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-80">80%</div>\n' +
+				'<div class="col-20">20%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-90-10', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-90">90%</div>\n' +
+				'<div class="col-10">10%</div>\n',
+            'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-grid-col-template-20-5x', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-20">20%</div>\n' +
+				'<div class="col-20">20%</div>\n' +
+				'<div class="col-20">20%</div>\n' +
+				'<div class="col-20">20%</div>\n' +
+				'<div class="col-20">20%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-25-4x', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-25">25%</div>\n' +
+				'<div class="col-25">25%</div>\n' +
+				'<div class="col-25">25%</div>\n' +
+				'<div class="col-25">25%</div>\n',
+            'action': action
+        });
+    }
+});
+$$(document).on('click', '.btn-element-add-grid-col-template-33-3x', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            'topic': 'add_element_component',
+            'element_id': element_id_selected,
+            'component': '<div class="col-33">33%</div>\n' +
+				'<div class="col-33">33%</div>\n' +
+				'<div class="col-33">33%</div>\n',
+            'action': action
+        });
+    }
+});
