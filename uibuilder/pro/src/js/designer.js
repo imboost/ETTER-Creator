@@ -23856,7 +23856,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-10-90', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-10">10%</div>\n' +
-				'<div class="col-90">90%</div>\n',
+                '<div class="col-90">90%</div>\n',
             'action': action
         });
     }
@@ -23871,7 +23871,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-20-80', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-20">20%</div>\n' +
-				'<div class="col-80">80%</div>\n',
+                '<div class="col-80">80%</div>\n',
             'action': action
         });
     }
@@ -23886,7 +23886,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-25-75', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-25">25%</div>\n' +
-				'<div class="col-75">75%</div>\n',
+                '<div class="col-75">75%</div>\n',
             'action': action
         });
     }
@@ -23901,7 +23901,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-30-70', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-30">30%</div>\n' +
-				'<div class="col-70">70%</div>\n',
+                '<div class="col-70">70%</div>\n',
             'action': action
         });
     }
@@ -23916,7 +23916,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-33-66', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-33">33%</div>\n' +
-				'<div class="col-66">66%</div>\n',
+                '<div class="col-66">66%</div>\n',
             'action': action
         });
     }
@@ -23931,7 +23931,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-40-60', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-40">40%</div>\n' +
-				'<div class="col-60">60%</div>\n',
+                '<div class="col-60">60%</div>\n',
             'action': action
         });
     }
@@ -23946,7 +23946,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-50-50', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-50">50%</div>\n' +
-				'<div class="col-50">50%</div>\n',
+                '<div class="col-50">50%</div>\n',
             'action': action
         });
     }
@@ -23961,7 +23961,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-60-40', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-60">60%</div>\n' +
-				'<div class="col-40">40%</div>\n',
+                '<div class="col-40">40%</div>\n',
             'action': action
         });
     }
@@ -23976,7 +23976,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-66-33', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-66">66%</div>\n' +
-				'<div class="col-33">33%</div>\n',
+                '<div class="col-33">33%</div>\n',
             'action': action
         });
     }
@@ -23991,7 +23991,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-70-30', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-70">70%</div>\n' +
-				'<div class="col-30">30%</div>\n',
+                '<div class="col-30">30%</div>\n',
             'action': action
         });
     }
@@ -24006,7 +24006,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-75-25', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-75">75%</div>\n' +
-				'<div class="col-25">25%</div>\n',
+                '<div class="col-25">25%</div>\n',
             'action': action
         });
     }
@@ -24021,7 +24021,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-80-20', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-80">80%</div>\n' +
-				'<div class="col-20">20%</div>\n',
+                '<div class="col-20">20%</div>\n',
             'action': action
         });
     }
@@ -24036,7 +24036,7 @@ $$(document).on('click', '.btn-element-add-grid-col-template-90-10', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-90">90%</div>\n' +
-				'<div class="col-10">10%</div>\n',
+                '<div class="col-10">10%</div>\n',
             'action': action
         });
     }
@@ -24052,10 +24052,10 @@ $$(document).on('click', '.btn-element-add-grid-col-template-20-5x', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-20">20%</div>\n' +
-				'<div class="col-20">20%</div>\n' +
-				'<div class="col-20">20%</div>\n' +
-				'<div class="col-20">20%</div>\n' +
-				'<div class="col-20">20%</div>\n',
+                '<div class="col-20">20%</div>\n' +
+                '<div class="col-20">20%</div>\n' +
+                '<div class="col-20">20%</div>\n' +
+                '<div class="col-20">20%</div>\n',
             'action': action
         });
     }
@@ -24070,9 +24070,9 @@ $$(document).on('click', '.btn-element-add-grid-col-template-25-4x', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-25">25%</div>\n' +
-				'<div class="col-25">25%</div>\n' +
-				'<div class="col-25">25%</div>\n' +
-				'<div class="col-25">25%</div>\n',
+                '<div class="col-25">25%</div>\n' +
+                '<div class="col-25">25%</div>\n' +
+                '<div class="col-25">25%</div>\n',
             'action': action
         });
     }
@@ -24087,9 +24087,429 @@ $$(document).on('click', '.btn-element-add-grid-col-template-33-3x', function ()
             'topic': 'add_element_component',
             'element_id': element_id_selected,
             'component': '<div class="col-33">33%</div>\n' +
-				'<div class="col-33">33%</div>\n' +
-				'<div class="col-33">33%</div>\n',
+                '<div class="col-33">33%</div>\n' +
+                '<div class="col-33">33%</div>\n',
             'action': action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table\">\n" +
+                "\t<table>\n" +
+                "\t\t<thead>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<th class=\"label-cell\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Calories</th>\n" +
+                "\t\t\t\t<th class=\"tablet-only\">Comment</th>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</thead>\n" +
+                "\t\t<tbody>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t<td class=\"tablet-only\">I like it!</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</tbody>\n" +
+                "\t</table>\n" +
+                "</div>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-pagination-footer', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table\">\n" +
+                "\t<table>\n" +
+                "\t\t<thead>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<th class=\"label-cell\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Calories</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Fat (g)</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Carbs</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Protein (g)</th>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</thead>\n" +
+                "\t\t<tbody>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">6.0</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">24</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">4.0</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</tbody>\n" +
+                "\t</table>\n" +
+                "\t<div class=\"data-table-footer\">\n" +
+                "\t\t<div class=\"data-table-rows-select\">\n" +
+                "\t\t\tPer page:\n" +
+                "\t\t\t<div class=\"input input-dropdown\">\n" +
+                "\t\t\t<select>\n" +
+                "\t\t\t\t<option value=\"5\">5</option>\n" +
+                "\t\t\t\t<option value=\"10\">10</option>\n" +
+                "\t\t\t\t<option value=\"25\">25</option>\n" +
+                "\t\t\t\t<option value=\"all\">All</option>\n" +
+                "\t\t\t</select>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"data-table-pagination\">\n" +
+                "\t\t\t<span class=\"data-table-pagination-label\">1-5 of 10</span>\n" +
+                "\t\t\t<a href=\"#\" class=\"link disabled\">\n" +
+                "\t\t\t\t<i class=\"icon icon-prev color-gray\"></i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t\t<a href=\"#\" class=\"link\">\n" +
+                "\t\t\t\t<i class=\"icon icon-next color-gray\"></i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</div>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-checkbox', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table data-table-init\">\n" +
+                "\t<table>\n" +
+                "\t\t<thead>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<th class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t<input type=\"checkbox\"/>\n" +
+                "\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t</label>\n" +
+                "\t\t\t\t</th>\n" +
+                "\t\t\t\t<th class=\"label-cell\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Calories</th>\n" +
+                "\t\t\t\t<th class=\"numeric-cell\">Protein (g)</th>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</thead>\n" +
+                "\t\t<tbody>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t<input type=\"checkbox\"/>\n" +
+                "\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t</label>\n" +
+                "\t\t\t\t</td>\n" +
+                "\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t<td class=\"numeric-cell\">4.0</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</tbody>\n" +
+                "\t</table>\n" +
+                "</div>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-input', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table\">\n" +
+                "\t<table>\n" +
+                "\t\t<thead>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<th class=\"input-cell\">\n" +
+                "\t\t\t\t\t<span class=\"table-head-label\">ID</span>\n" +
+                "\t\t\t\t\t<div class=\"input\" style=\"width: 50px\">\n" +
+                "\t\t\t\t\t\t<input type=\"number\" placeholder=\"Filter\">\n" +
+                "\t\t\t\t\t</div>\n" +
+                "\t\t\t\t</th>\n" +
+                "\t\t\t\t<th class=\"input-cell\">\n" +
+                "\t\t\t\t\t<span class=\"table-head-label\">Name</span>\n" +
+                "\t\t\t\t\t<div class=\"input\">\n" +
+                "\t\t\t\t\t\t<input type=\"text\" placeholder=\"Filter\">\n" +
+                "\t\t\t\t\t</div>\n" +
+                "\t\t\t\t</th>\n" +
+                "\t\t\t\t<th class=\"input-cell\">\n" +
+                "\t\t\t\t\t<span class=\"table-head-label\">Gender</span>\n" +
+                "\t\t\t\t\t<div class=\"input input-dropdown\">\n" +
+                "\t\t\t\t\t\t<select>\n" +
+                "\t\t\t\t\t\t\t<option value=\"All\">All</option>\n" +
+                "\t\t\t\t\t\t\t<option value=\"Male\">Male</option>\n" +
+                "\t\t\t\t\t\t\t<option value=\"Female\">Female</option>\n" +
+                "\t\t\t\t\t\t</select>\n" +
+                "\t\t\t\t\t</div>\n" +
+                "\t\t\t\t</th>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</thead>\n" +
+                "\t\t<tbody>\n" +
+                "\t\t</tbody>\n" +
+                "\t</table>\n" +
+                "</div>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-header', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table data-table-init\">\n" +
+                "\t<div class=\"card-header\">\n" +
+                "\t\t<div class=\"data-table-title\">Nutrition</div>\n" +
+                "\t\t<div class=\"data-table-actions\">\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">sort</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">sort</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">more_vertical_round</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">more_vert</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"card-content\">\n" +
+                "\t\t<table>\n" +
+                "\t\t\t<thead>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<th class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t\t</label>\n" +
+                "\t\t\t\t\t</th>\n" +
+                "\t\t\t\t\t<th class=\"label-cell\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell\">Calories</th>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</thead>\n" +
+                "\t\t\t<tbody>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<td class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t\t</label>\n" +
+                "\t\t\t\t\t</td>\n" +
+                "\t\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</tbody>\n" +
+                "\t\t</table>\n" +
+                "\t</div>\n" +
+                "</div>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-header-action', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table data-table-init\">\n" +
+                "\t<div class=\"card-header\">\n" +
+                "\t\t<!-- Table links/actions -->\n" +
+                "\t\t<div class=\"data-table-links\">\n" +
+                "\t\t\t<a class=\"link\">Add</a>\n" +
+                "\t\t\t<a class=\"link\">Remove</a>\n" +
+                "\t\t</div>\n" +
+                "\t\t<!-- Table actions -->\n" +
+                "\t\t<div class=\"data-table-actions\">\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">sort</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">sort</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">more_vertical_round</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">more_vert</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"card-content\">\n" +
+                "\t\t<table>\n" +
+                "\t\t\t<thead>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<th class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t\t</label>\n" +
+                "\t\t\t\t\t</th>\n" +
+                "\t\t\t\t\t<th class=\"label-cell\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell\">Calories</th>\n" +
+                "\t\t\t\t\t<th></th>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</thead>\n" +
+                "\t\t\t<tbody>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<td class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t\t</label>\n" +
+                "\t\t\t\t\t</td>\n" +
+                "\t\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t\t<td class=\"actions-cell\">\n" +
+                "\t\t\t\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon f7-icons ios-only\">compose</i>\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon material-icons md-only\">edit</i>\n" +
+                "\t\t\t\t\t\t</a>\n" +
+                "\t\t\t\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon f7-icons ios-only\">trash</i>\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon material-icons md-only\">delete</i>\n" +
+                "\t\t\t\t\t\t</a>\n" +
+                "\t\t\t\t\t</td>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</tbody>\n" +
+                "\t\t</table>\n" +
+                "\t</div>\n" +
+                "</div>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-sortable', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table data-table-init\">\n" +
+                "\t<div class=\"card-header\">\n" +
+                "\t\t<div class=\"data-table-title\">Nutrition</div>\n" +
+                "\t\t<div class=\"data-table-actions\">\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">sort</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">sort</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">more_vertical_round</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">more_vert</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"card-content\">\n" +
+                "\t\t<table>\n" +
+                "\t\t\t<thead>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<th class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t\t</label>\n" +
+                "\t\t\t\t\t</th>\n" +
+                "\t\t\t\t\t<th class=\"label-cell sortable-cell sortable-cell-active\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell sortable-cell\">Calories</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell sortable-cell\">Fat (g)</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell sortable-cell\">Carbs</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell sortable-cell\">Protein (g)</th>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</thead>\n" +
+                "\t\t\t<tbody>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<td class=\"checkbox-cell\">\n" +
+                "\t\t\t\t\t\t<label class=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<input type=\"checkbox\">\n" +
+                "\t\t\t\t\t\t\t<i class=\"icon-checkbox\"></i>\n" +
+                "\t\t\t\t\t\t</label>\n" +
+                "\t\t\t\t\t</td>\n" +
+                "\t\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">6.0</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">24</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">4.0</td>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</tbody>\n" +
+                "\t\t</table>\n" +
+                "\t</div>\n" +
+                "</div>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-table-collapsible', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<div class=\"data-table data-table-collapsible data-table-init\">\n" +
+                "\t<div class=\"card-header\">\n" +
+                "\t\t<div class=\"data-table-title\">Nutrition</div>\n" +
+                "\t\t<div class=\"data-table-actions\">\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">sort</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">sort</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t\t<a class=\"link icon-only\">\n" +
+                "\t\t\t\t<i class=\"icon f7-icons ios-only\">more_vertical_round</i>\n" +
+                "\t\t\t\t<i class=\"icon material-icons md-only\">more_vert</i>\n" +
+                "\t\t\t</a>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"card-content\">\n" +
+                "\t\t<table>\n" +
+                "\t\t\t<thead>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<th class=\"label-cell\">Desert (100g serving)</th>\n" +
+                "\t\t\t\t\t<th class=\"numeric-cell\">Calories</th>    \n" +
+                "\t\t\t\t\t<th class=\"numeric-cell\">Protein (g)</th>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</thead>\n" +
+                "\t\t\t<tbody>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<td class=\"label-cell\">Frozen yogurt</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">159</td>\n" +
+                "\t\t\t\t\t<td class=\"numeric-cell\">4.0</td>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</tbody>\n" +
+                "\t\t</table>\n" +
+                "\t</div>\n" +
+                "</div>\n",
+            "action": action
         });
     }
 });
