@@ -23483,3 +23483,361 @@ $$(document).on('click', '.btn-element-add-list-item-simple', function () {
         });
     }
 });
+
+$$(document).on('click', '.btn-element-add-list-item', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<div class=\"item-content\">\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t\t<div class=\"item-after\">CEO</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<div class=\"item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-text', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<div class=\"item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t\t<div class=\"item-after\">CEO</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-badge', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<div class=\"item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t\t<div class=\"item-after\">\n" +
+                "\t\t\t\t<span class=\"badge\">5</span>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-header-footer-text', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title\">\n" +
+                "\t\t\t<div class=\"item-header\">Name</div>\n" +
+                "\t\t\tJohn Doe\n" +
+                "\t\t\t<div class=\"item-footer\">Home</div>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-after\">Edit</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-header-footer-badge', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title\">\n" +
+                "\t\t\t<div class=\"item-header\">Name</div>\n" +
+                "\t\t\tJohn Doe\n" +
+                "\t\t\t<div class=\"item-footer\">Home</div>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-after\">\n" +
+                "\t\t\t<span class=\"badge\">5</span>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-header-footer-togle', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-content\">\n" +
+                "\t<div class=\"item-media\">\n" +
+                "\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t</div>\n" +
+                "\t<div class=\"item-inner\">\n" +
+                "\t\t<div class=\"item-title\">\n" +
+                "\t\t\t<div class=\"item-header\">Name</div>\n" +
+                "\t\t\tJohn Doe\n" +
+                "\t\t\t<div class=\"item-footer\">Home</div>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-after\">\n" +
+                "\t\t\t<label class=\"toggle toggle-init\">\n" +
+                "\t\t\t\t<input type=\"checkbox\" />\n" +
+                "\t\t\t\t<span class=\"toggle-icon\"></span>\n" +
+                "\t\t\t</label>\n" +
+                "\t\t</div>\n" +
+                "\t</div>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-header-footer-link-text', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<a href=\"#\" class=\"item-link item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">\n" +
+                "\t\t\t\t<div class=\"item-header\">Email</div>\n" +
+                "\t\t\t\tjohn@doe\n" +
+                "\t\t\t\t<div class=\"item-footer\">Home</div>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t\t<div class=\"item-after\">Edit</div>\n" +
+                "\t\t</div>\n" +
+                "\t</a>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-icon-header-footer-link-badge', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<a href=\"#\" class=\"item-link item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">\n" +
+                "\t\t\t\t<div class=\"item-header\">Email</div>\n" +
+                "\t\t\t\tjohn@doe\n" +
+                "\t\t\t\t<div class=\"item-footer\">Home</div>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t\t<div class=\"item-after\">\n" +
+                "\t\t\t\t<span class=\"badge\">5</span>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t</div>\n" +
+                "\t</a>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-link', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<a href=\"#\" class=\"item-link item-content\">\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t</div>\n" +
+                "\t</a>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-link-icon', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<a href=\"#\" class=\"item-link item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t</div>\n" +
+                "\t</a>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-link-icon-text', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<a href=\"#\" class=\"item-link item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t\t<div class=\"item-after\">CEO</div>\n" +
+                "\t\t</div>\n" +
+                "\t</a>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-link-icon-badge', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li>\n" +
+                "\t<a href=\"#\" class=\"item-link item-content\">\n" +
+                "\t\t<div class=\"item-media\">\n" +
+                "\t\t\t<i class=\"icon f7-icons\">person_crop_circle</i>\n" +
+                "\t\t</div>\n" +
+                "\t\t<div class=\"item-inner\">\n" +
+                "\t\t\t<div class=\"item-title\">John Doe</div>\n" +
+                "\t\t\t<div class=\"item-after\">\n" +
+                "\t\t\t\t<span class=\"badge\">5</span>\n" +
+                "\t\t\t</div>\n" +
+                "\t\t</div>\n" +
+                "\t</a>\n" +
+                "</li>\n",
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-list-item-devider', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": "<li class=\"item-divider\">Divider Here</li>\n",
+            "action": action
+        });
+    }
+});
