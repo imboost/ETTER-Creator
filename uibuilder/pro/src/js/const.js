@@ -2,12 +2,15 @@ var page_history = null;
 var page_count = null;
 var page_current = null;
 var page_previous = null;
+
 var ip_address = null;
 var app_name = null;
+
 var status_inspect = 0; // enable 1
 var element_id_selected = null;
 var page_opened = null;
 var data_page_id = null;
+
 var font_color = null;
 var border_color_top = null;
 var border_color_right = null;
@@ -114,7 +117,13 @@ var class_name_autocomplete = [
     "button-fill",
     "button-outline",
     "button-raised",
-    "button-round"
+    "button-round",
+    "inset",
+    "small-inset",
+    "xsmall-inset",
+    "medium-inset",
+    "large-inset",
+    "xlarge-inset"
 ]
 
 
