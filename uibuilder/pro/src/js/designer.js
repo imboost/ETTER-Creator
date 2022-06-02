@@ -24938,3 +24938,189 @@ $$(document).on('click', '.btn-element-add-treeview-togle', function () {
         });
     }
 });
+
+$$(document).on('click', '.btn-element-add-timeline-vertical', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div id="vertical-timeline" class="timeline">\n' +
+                '\t<div class="timeline-item">\n' +
+                '\t\t<div class="timeline-item-date">21 <small>DEC</small></div>\n' +
+                '\t\t<div class="timeline-item-divider"></div>\n' +
+                '\t\t<div class="timeline-item-content">Plain text item</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-vertical-side-by-side', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline timeline-sides">\n' +
+                '\t<div class="timeline-item">\n' +
+                '\t\t<div class="timeline-item-date">21 <small>DEC</small></div>\n' +
+                '\t\t<div class="timeline-item-divider"></div>\n' +
+                '\t\t<div class="timeline-item-content">Plain text item</div>\n' +
+                '\t</div>\n' +
+                '\t<div class="timeline-item">\n' +
+                '\t\t<div class="timeline-item-date">21 <small>DEC</small></div>\n' +
+                '\t\t<div class="timeline-item-divider"></div>\n' +
+                '\t\t<div class="timeline-item-content">Plain text item</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-vertical-tablet-side-by-side', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline medium-sides">\n' +
+                '\t<div class="timeline-item">\n' +
+                '\t\t<div class="timeline-item-date">21 <small>DEC</small></div>\n' +
+                '\t\t<div class="timeline-item-divider"></div>\n' +
+                '\t\t<div class="timeline-item-content">Plain text item</div>\n' +
+                '\t</div>\n' +
+                '\t<div class="timeline-item">\n' +
+                '\t\t<div class="timeline-item-date">21 <small>DEC</small></div>\n' +
+                '\t\t<div class="timeline-item-divider"></div>\n' +
+                '\t\t<div class="timeline-item-content">Plain text item</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-item', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline-item">\n' +
+                '\t<div class="timeline-item-date">21 <small>DEC</small></div>\n' +
+                '\t<div class="timeline-item-divider"></div>\n' +
+                '\t<div class="timeline-item-content">Plain text item</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-item-card', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline-item">\n' +
+                '\t<div class="timeline-item-date">27 <small>DEC</small></div>\n' +
+                '\t<div class="timeline-item-divider"></div>\n' +
+                '\t<div class="timeline-item-content card">\n' +
+                '\t\t<div class="card-header">Card header</div>\n' +
+                '\t\t<div class="card-content card-content-padding">Card content</div>\n' +
+                '\t\t<div class="card-footer">Card footer</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-item-inner', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline-item">\n' +
+                '\t<div class="timeline-item-date">22 <small>DEC</small></div>\n' +
+                '\t<div class="timeline-item-divider"></div>\n' +
+                '\t<div class="timeline-item-content">\n' +
+                '\t\t<div class="timeline-item-inner">Another text goes here</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-item-special', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline-item">\n' +
+                '\t<div class="timeline-item-date">23 <small>DEC</small></div>\n' +
+                '\t<div class="timeline-item-divider"></div>\n' +
+                '\t<div class="timeline-item-content">\n' +
+                '\t\t<div class="timeline-item-time">12:33</div>\n' +
+                '\t\t<div class="timeline-item-title">Item Title</div>\n' +
+                '\t\t<div class="timeline-item-subtitle">Item Subtitle</div>\n' +
+                '\t\t<div class="timeline-item-text">Item Text</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
+
+$$(document).on('click', '.btn-element-add-timeline-item-special-inner', function () {
+    var action = $$(this).attr('data-action');
+
+    if (element_id_selected === null) {
+        app.dialog.alert('Choose element to modify!');
+    } else {
+        uibuilder.send({
+            "topic": "add_element_component",
+            "element_id": element_id_selected,
+            "component": '<div class="timeline-item">\n' +
+                '\t<div class="timeline-item-date">23 <small>DEC</small></div>\n' +
+                '\t<div class="timeline-item-divider"></div>\n' +
+                '\t<div class="timeline-item-content">\n' +
+                '\t\t<div class="timeline-item-inner">\n' +
+                '\t\t\t<div class="timeline-item-time">12:33</div>\n' +
+                '\t\t\t<div class="timeline-item-title">Item Title</div>\n' +
+                '\t\t\t<div class="timeline-item-subtitle">Item Subtitle</div>\n' +
+                '\t\t\t<div class="timeline-item-text">Item Text</div>\n' +
+                '\t\t</div>\n' +
+                '\t</div>\n' +
+                '</div>\n',
+            "action": action
+        });
+    }
+});
