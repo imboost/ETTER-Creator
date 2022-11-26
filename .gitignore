@@ -120,3 +120,4 @@ dist
 flows_cred.json
 .sessions.json
 server_config.txt
+node_modules
