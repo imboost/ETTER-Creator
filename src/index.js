@@ -1,8 +1,9 @@
 const debug = "PROD" || process.env.debug || "PROD";
+// const debug = "DEV" || process.env.debug || "DEV";
 
-const { app, BrowserWindow, ipcMain, dialog, Menu, MenuItem } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const fs = require('fs');
-var path = require('path');
+const path = require('path');
 
 var flowfile = "flows.json";
 var userdir = ".";
@@ -21,6 +22,7 @@ if (!fs.existsSync(path.resolve(path.join(userdir, flowfile)))) {
 
 // Socket Port
 let socketPort = Math.floor(1000 + Math.random() * 9000);
+console.log(socketPort);
 
 const nodered = require("./server.js");
 nodered(socketPort);
@@ -39,7 +41,7 @@ var menu_option = [{
   submenu: [
     {
       label: 'Restart App',
-      click(item, focusedWindow) {
+      click() {
         app.relaunch();
         app.quit();
       }
@@ -91,7 +93,8 @@ const createWindow = () => {
     height: 600,
     frame: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     }
   });
 

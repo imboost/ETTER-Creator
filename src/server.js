@@ -51,7 +51,7 @@ module.exports = function (socketPort) {
             },
             userDir: ".",
             flowFile: "./flows.json",
-            httpStatic: "public",
+            // httpStatic: "/",
             contextStorage: {
                 default: {
                     module: "localfilesystem",
@@ -63,11 +63,13 @@ module.exports = function (socketPort) {
             credentialSecret: "admin"
         };
 
+        console.log(settings);
+
         // Initialise the runtime with a server and settings
         RED.init(REDserver, settings);
 
         // Add a simple route for static content served from 'public'
-        app.use("/", express.static(settings.httpStatic));
+        // app.use("/", express.static(settings.httpStatic));
 
         // Serve the editor UI from /red
         app.use(settings.httpAdminRoot, RED.httpAdmin);
