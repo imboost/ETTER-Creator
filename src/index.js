@@ -11,7 +11,6 @@ var userdir = ".";
 if (!fs.existsSync(path.resolve(path.join(userdir, flowfile)))) {
   fs.readFile(path.resolve(path.join(__dirname, "..", flowfile)), "utf8", (err, data) => {
     if (err) {
-      console.log(err)
       throw err
     } else {
       let file_content = data.toString('utf8');
@@ -22,7 +21,6 @@ if (!fs.existsSync(path.resolve(path.join(userdir, flowfile)))) {
 
 // Socket Port
 let socketPort = Math.floor(1000 + Math.random() * 9000);
-console.log(socketPort);
 
 const nodered = require("./server.js");
 nodered(socketPort);

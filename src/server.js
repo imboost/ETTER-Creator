@@ -63,8 +63,6 @@ module.exports = function (socketPort) {
             credentialSecret: "admin"
         };
 
-        console.log(settings);
-
         // Initialise the runtime with a server and settings
         RED.init(REDserver, settings);
 
