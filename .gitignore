@@ -122,3 +122,4 @@ flows_cred.json
 server_config.txt
 node_modules
 out
+uibuilder/test/
